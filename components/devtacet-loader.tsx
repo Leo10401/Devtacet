@@ -24,13 +24,6 @@ export function DevtacetLoader() {
 
     const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
-    const wordEl = wordRef.current
-    if (!wordEl) return
-
-    const WORD = 'DEVTACET'
-    wordEl.innerHTML = WORD.split('').map((ch) => `<span class="inline-block opacity-0 translate-y-[7px]">${ch}</span>`).join('')
-    const letters = wordEl.querySelectorAll<HTMLSpanElement>('span')
-
     function sleep(ms: number) {
       return new Promise((res) => setTimeout(res, ms))
     }
@@ -42,7 +35,6 @@ export function DevtacetLoader() {
       if (markWrapRef.current) markWrapRef.current.getAnimations().forEach((a) => a.cancel())
       if (sweepGroupRef.current) sweepGroupRef.current.getAnimations().forEach((a) => a.cancel())
       if (statusRef.current) statusRef.current.getAnimations().forEach((a) => a.cancel())
-      letters.forEach((el) => el.getAnimations().forEach((a) => a.cancel()))
     }
 
     function resetVisualState() {
@@ -71,12 +63,6 @@ export function DevtacetLoader() {
 
       if (fillMark) fillMark.style.fillOpacity = '0'
       if (markWrap) markWrap.style.transform = 'scale(1)'
-
-      letters.forEach((el) => {
-        el.style.opacity = '0'
-        el.style.transform = 'translateY(7px)'
-      })
-      if (wordEl) wordEl.style.opacity = '1'
 
       if (statusEl) statusEl.style.opacity = '0'
       if (barFill) barFill.style.width = '0%'
@@ -167,11 +153,6 @@ export function DevtacetLoader() {
         }
         if (strokeOuterRef.current) strokeOuterRef.current.style.opacity = '0'
         if (strokeInnerRef.current) strokeInnerRef.current.style.opacity = '0'
-        if (wordEl) wordEl.style.opacity = '1'
-        letters.forEach((el) => {
-          el.style.opacity = '1'
-          el.style.transform = 'translateY(0)'
-        })
         if (statusRef.current) statusRef.current.style.opacity = '1'
         if (barFillRef.current) barFillRef.current.style.width = '100%'
         if (pctRef.current) pctRef.current.textContent = '100%'
@@ -218,16 +199,7 @@ export function DevtacetLoader() {
       strokeOuter.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 320, easing: 'ease-out', fill: 'forwards' })
       strokeInner.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 320, easing: 'ease-out', fill: 'forwards' })
 
-      await sleep(440)
-
-      const stagger = 30
-      letters.forEach((el, i) => {
-        el.animate(
-          [{ opacity: 0, transform: 'translateY(7px)' }, { opacity: 1, transform: 'translateY(0)' }],
-          { duration: 420, delay: i * stagger, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' }
-        )
-      })
-      await sleep(420 + letters.length * stagger)
+      await sleep(300)
 
       if (statusRef.current) {
         statusRef.current.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 320, easing: 'ease-out', fill: 'forwards' })
@@ -314,13 +286,6 @@ export function DevtacetLoader() {
             </g>
           </svg>
         </div>
-
-        <p
-          ref={wordRef}
-          id="word"
-          aria-hidden="true"
-          className="word m-0 flex p-0 font-display text-[clamp(15px,2.5vw,19px)] font-semibold uppercase tracking-[0.46em] text-[#EDF1F6]"
-        />
 
         <div ref={statusRef} id="status" className="status flex w-[clamp(140px,22vw,190px)] flex-col gap-2 opacity-0">
           <div className="status-row flex items-baseline justify-between font-mono text-[10.5px] tracking-[0.16em] text-[#5B6579]">

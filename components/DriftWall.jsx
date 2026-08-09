@@ -5,7 +5,7 @@ const DEFAULT_ITEMS = Array.from({ length: 15 }, (_, i) => {
   return {
     image: `https://picsum.photos/id/${ids[i % ids.length]}/600/400`,
     title: `Tile ${i + 1}`,
-    href: undefined
+    href: '#'
   };
 });
 
@@ -42,7 +42,7 @@ const DriftWall = ({
   grayscale = false,
   overlayColor = '#060010',
   className = '',
-  style
+  style = {}
 }) => {
   const containerRef = useRef(null);
   const planeRef = useRef(null);

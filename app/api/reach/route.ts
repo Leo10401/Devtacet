@@ -132,14 +132,34 @@ export async function POST(req: NextRequest) {
     // Geolocation lookup
     const locData = await fetchIpLocation(clientIp)
 
+    const isPrecise = body.isPrecise === true
+    const exactLat = typeof body.exactLat === 'number' ? body.exactLat : undefined
+    const exactLon = typeof body.exactLon === 'number' ? body.exactLon : undefined
+    const accuracy = typeof body.accuracy === 'number' ? body.accuracy : undefined
+    const address = body.address || ''
+    const suburb = body.suburb || ''
+    const postcode = body.postcode || ''
+
+    const finalCity = (isPrecise && body.city) ? body.city : locData.city
+    const finalRegion = (isPrecise && body.region) ? body.region : locData.region
+    const finalCountry = (isPrecise && body.country) ? body.country : locData.country
+    const finalCountryCode = (isPrecise && body.countryCode) ? body.countryCode : locData.countryCode
+
     const newVisit = await Reach.create({
       ip: locData.ip,
-      city: locData.city,
-      region: locData.region,
-      country: locData.country,
-      countryCode: locData.countryCode,
+      city: finalCity,
+      region: finalRegion,
+      country: finalCountry,
+      countryCode: finalCountryCode,
       lat: locData.lat,
       lon: locData.lon,
+      exactLat,
+      exactLon,
+      accuracy,
+      address,
+      suburb,
+      postcode,
+      isPrecise,
       isp: locData.isp,
       userAgent,
       path: pagePath,
@@ -148,12 +168,16 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       success: true,
       data: newVisit,
-      message: 'Visit reach logged successfully to MongoDB',
+      message: isPrecise ? 'Precise GPS location logged successfully to MongoDB' : 'Visit reach logged successfully to MongoDB',
     })
   } catch (error: any) {
     console.error('Error in POST /api/reach:', error)
+    let msg = error.message || 'Failed to log visit reach'
+    if (msg.includes('MongooseServerSelectionError') || msg.includes('Could not connect to any servers')) {
+      msg = 'MongoDB Atlas Connection Error: Please whitelist your IP address (or 0.0.0.0/0) in MongoDB Atlas Network Access.'
+    }
     return NextResponse.json(
-      { success: false, error: error.message || 'Failed to log visit reach' },
+      { success: false, error: msg },
       { status: 500 }
     )
   }
@@ -203,8 +227,12 @@ export async function GET() {
     })
   } catch (error: any) {
     console.error('Error in GET /api/reach:', error)
+    let msg = error.message || 'Failed to fetch reach analytics'
+    if (msg.includes('MongooseServerSelectionError') || msg.includes('Could not connect to any servers')) {
+      msg = 'MongoDB Atlas Connection Error: Please whitelist your IP address (or 0.0.0.0/0) in MongoDB Atlas Network Access.'
+    }
     return NextResponse.json(
-      { success: false, error: error.message || 'Failed to fetch reach analytics' },
+      { success: false, error: msg },
       { status: 500 }
     )
   }

@@ -17,6 +17,8 @@ import {
   Activity,
   ArrowUpRight,
   Database,
+  Navigation,
+  Crosshair,
 } from 'lucide-react'
 import { SiteHeader } from '@/components/site-header'
 import { SiteFooter } from '@/components/site-footer'
@@ -30,6 +32,13 @@ interface ReachLog {
   countryCode: string
   lat: number
   lon: number
+  exactLat?: number
+  exactLon?: number
+  accuracy?: number
+  address?: string
+  suburb?: string
+  postcode?: string
+  isPrecise?: boolean
   isp: string
   userAgent: string
   path: string
@@ -84,7 +93,6 @@ export default function ReachPage() {
   const [lastLoggedVisit, setLastLoggedVisit] = useState<ReachLog | null>(null)
   const [errorMsg, setErrorMsg] = useState<string | null>(null)
   const [searchTerm, setSearchTerm] = useState<string>('')
-  const [autoLogged, setAutoLogged] = useState<boolean>(false)
 
   const fetchReachData = useCallback(async () => {
     setLoading(true)
@@ -106,7 +114,7 @@ export default function ReachPage() {
         setErrorMsg(json.error || 'Could not load reach analytics.')
       }
     } catch (err: any) {
-      setErrorMsg('Failed to connect to reach API endpoint.')
+      setErrorMsg(err.message || 'Failed to connect to reach API endpoint.')
     } finally {
       setLoading(false)
     }
@@ -114,6 +122,7 @@ export default function ReachPage() {
 
   const logCurrentVisit = useCallback(async () => {
     setLogging(true)
+    setErrorMsg(null)
     try {
       const res = await fetch('/api/reach', {
         method: 'POST',
@@ -123,14 +132,101 @@ export default function ReachPage() {
       const json = await res.json()
       if (json.success && json.data) {
         setLastLoggedVisit(json.data)
-        // Refresh the list after logging
         await fetchReachData()
+      } else {
+        setErrorMsg(json.error || 'Failed to log visit.')
       }
     } catch (err) {
       console.error('Failed to log current visit:', err)
+      setErrorMsg('Failed to log current visit.')
     } finally {
       setLogging(false)
     }
+  }, [fetchReachData])
+
+  const logPreciseVisit = useCallback(async () => {
+    if (!navigator.geolocation) {
+      setErrorMsg('Geolocation is not supported by your browser.')
+      return
+    }
+    setLogging(true)
+    setErrorMsg(null)
+
+    navigator.geolocation.getCurrentPosition(
+      async (position) => {
+        const { latitude, longitude, accuracy } = position.coords
+
+        let addressData = {
+          city: '',
+          region: '',
+          country: '',
+          countryCode: '',
+          address: '',
+          suburb: '',
+          postcode: '',
+        }
+
+        // Reverse geocoding via OpenStreetMap Nominatim
+        try {
+          const revRes = await fetch(
+            `https://nominatim.openstreetmap.org/reverse?format=json&lat=${latitude}&lon=${longitude}`
+          )
+          if (revRes.ok) {
+            const revJson = await revRes.json()
+            const a = revJson.address || {}
+            addressData = {
+              city: a.city || a.town || a.village || a.suburb || '',
+              region: a.state || a.county || '',
+              country: a.country || '',
+              countryCode: a.country_code ? a.country_code.toUpperCase() : '',
+              address: revJson.display_name || '',
+              suburb: a.suburb || a.neighbourhood || a.residential || '',
+              postcode: a.postcode || '',
+            }
+          }
+        } catch (err) {
+          console.warn('Reverse geocoding fetch failed:', err)
+        }
+
+        try {
+          const res = await fetch('/api/reach', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              path: '/reach',
+              force: true,
+              isPrecise: true,
+              exactLat: latitude,
+              exactLon: longitude,
+              accuracy: Math.round(accuracy),
+              ...addressData,
+            }),
+          })
+          const json = await res.json()
+          if (json.success && json.data) {
+            setLastLoggedVisit(json.data)
+            await fetchReachData()
+          } else {
+            setErrorMsg(json.error || 'Failed to log precise location.')
+          }
+        } catch (err: any) {
+          setErrorMsg('Failed to log precise location.')
+        } finally {
+          setLogging(false)
+        }
+      },
+      (geoErr) => {
+        setLogging(false)
+        if (geoErr.code === geoErr.PERMISSION_DENIED) {
+          setErrorMsg(
+            'Location permission denied. Please allow location access in your browser settings to get precise GPS coordinates.'
+          )
+        } else {
+          setErrorMsg(`Location error: ${geoErr.message}`)
+        }
+      },
+      { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+    )
   }, [fetchReachData])
 
   // Fetch reach analytics data on page mount
@@ -145,7 +241,9 @@ export default function ReachPage() {
       v.ip.toLowerCase().includes(query) ||
       v.city.toLowerCase().includes(query) ||
       v.country.toLowerCase().includes(query) ||
-      v.isp.toLowerCase().includes(query)
+      v.isp.toLowerCase().includes(query) ||
+      (v.address && v.address.toLowerCase().includes(query)) ||
+      (v.suburb && v.suburb.toLowerCase().includes(query))
     )
   })
 
@@ -155,7 +253,7 @@ export default function ReachPage() {
 
       <main className="flex-1 max-w-6xl w-full mx-auto px-4 md:px-6 pt-24 pb-16">
         {/* Top Header Banner */}
-        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
           <div>
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-xs text-primary font-medium mb-3">
               <Database className="w-3.5 h-3.5" />
@@ -169,11 +267,25 @@ export default function ReachPage() {
               Global Reach & Visitor Insights
             </h1>
             <p className="text-muted-foreground mt-2 text-sm md:text-base max-w-2xl">
-              Real-time user IP and geolocation tracking stored directly in your MongoDB database cluster.
+              Real-time IP geolocation and high-precision browser GPS tracking stored directly in your MongoDB database.
             </p>
           </div>
 
-          <div className="flex items-center gap-3">
+          <div className="flex flex-wrap items-center gap-3">
+            <button
+              onClick={logPreciseVisit}
+              disabled={logging}
+              className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-medium text-sm transition-all hover:opacity-90 active:scale-95 disabled:opacity-50 shadow-lg shadow-emerald-500/20"
+              title="Request high-accuracy GPS coordinates & street address"
+            >
+              {logging ? (
+                <RefreshCw className="w-4 h-4 animate-spin" />
+              ) : (
+                <Crosshair className="w-4 h-4 text-emerald-100 animate-pulse" />
+              )}
+              <span>{logging ? 'Locating...' : 'Log Precise GPS Location'}</span>
+            </button>
+
             <button
               onClick={logCurrentVisit}
               disabled={logging}
@@ -184,7 +296,7 @@ export default function ReachPage() {
               ) : (
                 <Send className="w-4 h-4" />
               )}
-              <span>{logging ? 'Logging...' : 'Log My IP & Location'}</span>
+              <span>Log IP Location</span>
             </button>
 
             <button
@@ -208,21 +320,32 @@ export default function ReachPage() {
               className="mb-8 p-4 rounded-2xl bg-emerald-500/10 border border-emerald-500/30 flex items-start sm:items-center justify-between gap-4"
             >
               <div className="flex items-center gap-3">
-                <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400">
+                <div className="p-2 rounded-xl bg-emerald-500/20 text-emerald-400 shrink-0">
                   <CheckCircle2 className="w-5 h-5" />
                 </div>
                 <div>
-                  <h4 className="text-sm font-semibold text-emerald-300">
-                    Your Visit Recorded to MongoDB
+                  <h4 className="text-sm font-semibold text-emerald-300 flex items-center gap-2">
+                    <span>Visit Recorded to MongoDB</span>
+                    {lastLoggedVisit.isPrecise && (
+                      <span className="px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 text-[11px] font-mono border border-emerald-500/30">
+                        🎯 Precise GPS (±{lastLoggedVisit.accuracy}m)
+                      </span>
+                    )}
                   </h4>
                   <p className="text-xs text-emerald-200/80 mt-0.5">
                     IP: <span className="font-mono">{lastLoggedVisit.ip}</span> • Location:{' '}
-                    {getFlagEmoji(lastLoggedVisit.countryCode)} {lastLoggedVisit.city},{' '}
-                    {lastLoggedVisit.country} • ISP: {lastLoggedVisit.isp}
+                    {getFlagEmoji(lastLoggedVisit.countryCode)}{' '}
+                    {lastLoggedVisit.suburb ? `${lastLoggedVisit.suburb}, ` : ''}
+                    {lastLoggedVisit.city}, {lastLoggedVisit.country}
+                    {lastLoggedVisit.address && (
+                      <span className="block text-[11px] text-emerald-300/90 mt-0.5 font-mono truncate max-w-xl">
+                        📍 {lastLoggedVisit.address}
+                      </span>
+                    )}
                   </p>
                 </div>
               </div>
-              <span className="text-xs font-mono bg-emerald-950/60 px-2.5 py-1 rounded-md text-emerald-400 border border-emerald-800">
+              <span className="text-xs font-mono bg-emerald-950/60 px-2.5 py-1 rounded-md text-emerald-400 border border-emerald-800 shrink-0">
                 200 OK
               </span>
             </motion.div>
@@ -260,7 +383,7 @@ export default function ReachPage() {
                 <ArrowUpRight className="w-3 h-3" /> Live
               </span>
             </div>
-            <p className="text-xs text-muted-foreground mt-1">Total page impressions logged</p>
+            <p className="text-xs text-muted-foreground mt-1">Total impressions logged</p>
           </motion.div>
 
           <motion.div
@@ -283,7 +406,7 @@ export default function ReachPage() {
               </span>
               <span className="text-xs text-muted-foreground font-medium">Distinct IPs</span>
             </div>
-            <p className="text-xs text-muted-foreground mt-1">Unique global devices tracked</p>
+            <p className="text-xs text-muted-foreground mt-1">Unique devices tracked</p>
           </motion.div>
 
           <motion.div
@@ -384,7 +507,6 @@ export default function ReachPage() {
             ) : (
               <div className="space-y-3">
                 {stats.topCities.slice(0, 5).map((c, i) => {
-                  const pct = Math.round((c.count / (stats.totalVisits || 1)) * 100)
                   return (
                     <div key={i} className="flex items-center justify-between p-2.5 rounded-xl bg-secondary/40 border border-border/50">
                       <div className="flex items-center gap-3">
@@ -413,7 +535,7 @@ export default function ReachPage() {
             <div>
               <h2 className="text-xl font-bold font-display">Recent Visitor Logs</h2>
               <p className="text-xs text-muted-foreground mt-0.5">
-                Displaying latest visits captured with IP address, location and ISP
+                Displaying latest visits with IP address, precise GPS coordinates, address, and network details
               </p>
             </div>
 
@@ -421,7 +543,7 @@ export default function ReachPage() {
               <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
               <input
                 type="text"
-                placeholder="Search IP, City, Country, ISP..."
+                placeholder="Search IP, City, Address, ISP..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full pl-9 pr-4 py-2 rounded-xl bg-secondary/50 border border-border text-sm text-foreground focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/60"
@@ -434,10 +556,10 @@ export default function ReachPage() {
             <table className="w-full text-left text-sm">
               <thead className="bg-secondary/40 text-xs font-semibold uppercase text-muted-foreground border-b border-border">
                 <tr>
-                  <th className="px-6 py-3.5">IP Address</th>
-                  <th className="px-6 py-3.5">Location</th>
+                  <th className="px-6 py-3.5">IP & Accuracy</th>
+                  <th className="px-6 py-3.5">Location & Address</th>
                   <th className="px-6 py-3.5">ISP / Network</th>
-                  <th className="px-6 py-3.5">Page Path</th>
+                  <th className="px-6 py-3.5">Coordinates</th>
                   <th className="px-6 py-3.5 text-right">Time</th>
                 </tr>
               </thead>
@@ -460,31 +582,72 @@ export default function ReachPage() {
                 ) : (
                   filteredVisits.map((v) => (
                     <tr key={v._id} className="hover:bg-secondary/30 transition-colors">
-                      <td className="px-6 py-4 font-mono font-medium text-xs text-foreground">
-                        <div className="flex items-center gap-2">
-                          <Shield className="w-3.5 h-3.5 text-primary shrink-0" />
-                          <span>{v.ip}</span>
+                      <td className="px-6 py-4 font-mono text-xs text-foreground">
+                        <div className="flex flex-col gap-1">
+                          <div className="flex items-center gap-1.5 font-medium">
+                            <Shield className="w-3.5 h-3.5 text-primary shrink-0" />
+                            <span>{v.ip}</span>
+                          </div>
+                          {v.isPrecise ? (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-emerald-500/15 text-emerald-300 text-[10px] w-fit border border-emerald-500/30">
+                              <Crosshair className="w-2.5 h-2.5" />
+                              GPS Precise (±{v.accuracy || 10}m)
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary text-muted-foreground text-[10px] w-fit border border-border">
+                              🌐 IP Approx
+                            </span>
+                          )}
                         </div>
                       </td>
                       <td className="px-6 py-4">
-                        <div className="flex items-center gap-2">
-                          <span className="text-lg">{getFlagEmoji(v.countryCode)}</span>
+                        <div className="flex items-start gap-2">
+                          <span className="text-lg mt-0.5">{getFlagEmoji(v.countryCode)}</span>
                           <div>
-                            <p className="font-semibold text-xs">{v.city}, {v.region}</p>
+                            <p className="font-semibold text-xs">
+                              {v.suburb ? `${v.suburb}, ` : ''}
+                              {v.city}, {v.region}
+                            </p>
                             <p className="text-[11px] text-muted-foreground">{v.country}</p>
+                            {v.address && (
+                              <p className="text-[11px] text-emerald-400/90 font-mono mt-0.5 truncate max-w-xs" title={v.address}>
+                                📍 {v.address}
+                              </p>
+                            )}
                           </div>
                         </div>
                       </td>
                       <td className="px-6 py-4 text-xs text-muted-foreground">
                         <div className="flex items-center gap-1.5">
                           <Laptop className="w-3.5 h-3.5 shrink-0 opacity-60" />
-                          <span className="truncate max-w-[180px]">{v.isp}</span>
+                          <span className="truncate max-w-[160px]">{v.isp}</span>
                         </div>
                       </td>
                       <td className="px-6 py-4 font-mono text-xs text-muted-foreground">
-                        <span className="px-2 py-0.5 rounded bg-secondary/80 border border-border">
-                          {v.path || '/reach'}
-                        </span>
+                        {v.exactLat && v.exactLon ? (
+                          <a
+                            href={`https://www.google.com/maps?q=${v.exactLat},${v.exactLon}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2 py-1 rounded bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 hover:underline"
+                            title="Open in Google Maps"
+                          >
+                            <Navigation className="w-3 h-3 text-emerald-400" />
+                            <span>{v.exactLat.toFixed(4)}, {v.exactLon.toFixed(4)}</span>
+                          </a>
+                        ) : v.lat && v.lon ? (
+                          <a
+                            href={`https://www.google.com/maps?q=${v.lat},${v.lon}`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary/80 border border-border hover:underline"
+                            title="Open City Region in Google Maps"
+                          >
+                            <span>{v.lat.toFixed(2)}, {v.lon.toFixed(2)}</span>
+                          </a>
+                        ) : (
+                          <span className="text-muted-foreground/60">—</span>
+                        )}
                       </td>
                       <td className="px-6 py-4 text-right text-xs text-muted-foreground font-mono">
                         {formatTimeAgo(v.createdAt)}

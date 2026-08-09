@@ -8,6 +8,13 @@ export interface IReach extends Document {
   countryCode?: string
   lat?: number
   lon?: number
+  exactLat?: number
+  exactLon?: number
+  accuracy?: number
+  address?: string
+  suburb?: string
+  postcode?: string
+  isPrecise?: boolean
   isp?: string
   userAgent?: string
   path?: string
@@ -23,6 +30,13 @@ const ReachSchema: Schema = new Schema(
     countryCode: { type: String, default: 'UN' },
     lat: { type: Number, default: 0 },
     lon: { type: Number, default: 0 },
+    exactLat: { type: Number },
+    exactLon: { type: Number },
+    accuracy: { type: Number },
+    address: { type: String, default: '' },
+    suburb: { type: String, default: '' },
+    postcode: { type: String, default: '' },
+    isPrecise: { type: Boolean, default: false },
     isp: { type: String, default: 'Unknown Provider' },
     userAgent: { type: String, default: '' },
     path: { type: String, default: '/reach' },

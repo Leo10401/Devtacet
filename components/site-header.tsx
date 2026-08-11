@@ -15,7 +15,14 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false)
 
   return (
-    <motion.header
+    <>
+      <a
+        href="#main-content"
+        className="fixed left-4 top-4 z-[100] -translate-y-[150%] rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-transform focus:translate-y-0 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+      >
+        Skip to main content
+      </a>
+      <motion.header
       initial={{ y: -24, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
@@ -89,5 +96,6 @@ export function SiteHeader() {
         )}
       </AnimatePresence>
     </motion.header>
+    </>
   )
 }

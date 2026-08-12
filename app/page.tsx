@@ -12,7 +12,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader />
-      <main className="snap-container">
+      <main id="main-content" tabIndex={-1} className="snap-container outline-none">
         <div className="snap-section-flush">
           <Hero />
         </div>

@@ -44,6 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`bg-background ${heading.variable} ${body.variable}`}>
       <body className="antialiased font-sans">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:p-4 focus:bg-background focus:text-foreground">Skip to main content</a>
         <DevtacetLoader />
         <VisitorTracker />
         {children}

@@ -273,8 +273,11 @@ export default function ReachPage() {
 
           <div className="flex flex-wrap items-center gap-3">
             <button
+              type="button"
               onClick={logPreciseVisit}
               disabled={logging}
+              aria-disabled={logging}
+              aria-label={logging ? 'Locating precise GPS position' : 'Log Precise GPS Location'}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-medium text-sm transition-all hover:opacity-90 active:scale-95 disabled:opacity-50 shadow-lg shadow-emerald-500/20"
               title="Request high-accuracy GPS coordinates & street address"
             >
@@ -287,8 +290,11 @@ export default function ReachPage() {
             </button>
 
             <button
+              type="button"
               onClick={logCurrentVisit}
               disabled={logging}
+              aria-disabled={logging}
+              aria-label={logging ? 'Logging IP Location' : 'Log IP Location'}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium text-sm transition-all hover:opacity-90 active:scale-95 disabled:opacity-50 shadow-lg shadow-primary/20"
             >
               {logging ? (
@@ -300,8 +306,11 @@ export default function ReachPage() {
             </button>
 
             <button
+              type="button"
               onClick={fetchReachData}
               disabled={loading}
+              aria-disabled={loading}
+              aria-label="Refresh reach analytics data"
               className="inline-flex items-center justify-center p-2.5 rounded-xl border border-border bg-card/60 hover:bg-card text-foreground transition-all"
               title="Refresh Data"
             >

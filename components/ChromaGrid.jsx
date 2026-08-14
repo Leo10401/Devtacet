@@ -117,6 +117,13 @@ const ChromaGrid = ({ items, className = '', radius = 300, damping = 0.45, fadeO
     c.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
   };
 
+  const handleKeyDown = (e, url) => {
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      handleCardClick(url);
+    }
+  };
+
   return (
     <div
       ref={rootRef}
@@ -132,9 +139,12 @@ const ChromaGrid = ({ items, className = '', radius = 300, damping = 0.45, fadeO
       {data.map((c, i) => (
         <article
           key={i}
+          role="link"
+          tabIndex={0}
           onMouseMove={handleCardMove}
           onClick={() => handleCardClick(c.url)}
-          className="group relative flex flex-col w-[280px] rounded-[20px] overflow-hidden border transition-all duration-300 cursor-pointer hover:scale-[1.02]"
+          onKeyDown={(e) => handleKeyDown(e, c.url)}
+          className="group relative flex flex-col w-[280px] rounded-[20px] overflow-hidden border transition-all duration-300 cursor-pointer hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
           style={{
             borderColor: c.borderColor || 'rgba(255,255,255,0.15)',
             background: c.gradient || 'transparent',

@@ -23,7 +23,17 @@
 - [Development Process](https://devtacet.vercel.app#process): Discovery, Design, Build, Launch & Growth phases
 - [About Devtacet](https://devtacet.vercel.app#about): Studio philosophy and engineering team values
 - [Frequently Asked Questions](https://devtacet.vercel.app#faq): Direct answers to key agency queries
+- [Blog](https://devtacet.vercel.app/blog): Engineering insights and deep dives
 - [Contact Devtacet](https://devtacet.vercel.app#contact): Inquiries, estimates, and project initiation
+
+## Blog Articles
+
+- [The Complete Guide to Modern Web Development in 2026](https://devtacet.vercel.app/blog/web-development)
+- [Android App Development: From Idea to Play Store Launch](https://devtacet.vercel.app/blog/android-development)
+- [Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook](https://devtacet.vercel.app/blog/seo)
+- [Social Media Marketing Strategy for Digital Products](https://devtacet.vercel.app/blog/social-media-marketing)
+- [Management Information Systems: How MIS Drives Business Decisions](https://devtacet.vercel.app/blog/mis)
+- [Understanding System Software: The Foundation of Every Digital Product](https://devtacet.vercel.app/blog/system-software)
 
 ## Full LLM Context
 

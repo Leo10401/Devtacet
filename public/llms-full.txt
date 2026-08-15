@@ -3,7 +3,7 @@
 ## Overview
 Devtacet is a modern digital studio that designs, builds, and scales digital products. Backed by full-stack engineering expertise and AI-first search engine optimization (SEO & GEO), Devtacet takes products from initial concept to top-ranking market presence.
 
-- **Official Website**: https://devtacet.vercel.app
+- **Official Website**: https://devtacet.me
 - **Industry**: Digital Agency / Software Engineering / Mobile & Web Product Studio
 - **Primary Offerings**: Mobile App Development, Website Development, Data Analytics Tools, SEO Marketing & Generative Engine Optimization (GEO)
 
@@ -89,33 +89,33 @@ Unlike traditional software agencies that assign entry-level (L1/L2) developers 
 **A**: Yes. Devtacet implements dual SEO strategies: Technical Google SEO for traditional SERPs and Generative Engine Optimization (GEO) for AI search engines like ChatGPT, Perplexity, SearchGPT, and Bing Copilot.
 
 ### Q: How can a client get in touch or start a project with Devtacet?
-**A**: Clients can initiate contact directly via the website contact form at https://devtacet.vercel.app#contact.
+**A**: Clients can initiate contact directly via the website contact form at https://devtacet.me#contact.
 
 ---
 
 ## Blog Articles — Engineering Insights by Devtacet
 
 ### The Complete Guide to Modern Web Development in 2026
-**URL**: https://devtacet.vercel.app/blog/web-development
+**URL**: https://devtacet.me/blog/web-development
 **Summary**: Comprehensive guide covering Next.js, React 19, TypeScript, Tailwind CSS, backend architecture with Node.js and MongoDB, performance optimization (Server Components, Edge Functions, ISR), SEO for web apps, and deployment on Vercel/AWS. Covers the full modern frontend and backend stack.
 
 ### Android App Development: From Idea to Play Store Launch
-**URL**: https://devtacet.vercel.app/blog/android-development
+**URL**: https://devtacet.me/blog/android-development
 **Summary**: Practical roadmap for building production Android apps. Covers native vs. cross-platform decision framework (Kotlin vs. React Native vs. Flutter), clean architecture patterns, mobile UX principles (gesture navigation, 60fps animations, offline-first), testing strategies (Jest, Detox), Play Store review navigation, and post-launch growth with ASO and analytics.
 
 ### Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook
-**URL**: https://devtacet.vercel.app/blog/seo
+**URL**: https://devtacet.me/blog/seo
 **Summary**: Dual SEO strategy guide covering traditional Technical SEO (Core Web Vitals, sitemaps, robots.txt, canonical URLs, Schema.org JSON-LD) and Generative Engine Optimization (GEO) for AI search engines. Covers the llms.txt standard, entity-first content strategy, FAQ schema for AI Overviews, robots.txt configuration for AI bots (GPTBot, PerplexityBot, ClaudeBot), and success measurement.
 
 ### Social Media Marketing Strategy for Digital Products
-**URL**: https://devtacet.vercel.app/blog/social-media-marketing
+**URL**: https://devtacet.me/blog/social-media-marketing
 **Summary**: SMM playbook covering platform selection (LinkedIn for B2B, Instagram/TikTok for consumer), content calendar framework (40/25/20/15 pillar ratio), engagement loops, paid social amplification, and revenue-tied metrics (engagement rate, CTR, conversion rate, share of voice, CPA). Covers SMM + SEO compound effects.
 
 ### Management Information Systems: How MIS Drives Business Decisions
-**URL**: https://devtacet.vercel.app/blog/mis
+**URL**: https://devtacet.me/blog/mis
 **Summary**: Guide to MIS architecture covering system components (data sources, ETL pipelines, data warehouses, business logic, presentation layer), types (Transaction Processing Systems, Decision Support Systems, Executive Information Systems), custom MIS solutions with Node.js/MongoDB/React dashboards, and implementation best practices.
 
 ### Understanding System Software: The Foundation of Every Digital Product
-**URL**: https://devtacet.vercel.app/blog/system-software
+**URL**: https://devtacet.me/blog/system-software
 **Summary**: Deep dive into system software categories: Operating Systems (Linux, Android, iOS), Device Drivers, Middleware (Node.js, Docker), Firmware (IoT, embedded systems), and Runtime Environments (JVM, V8, Dart VM). Covers why system software knowledge matters for application developers and system software in the cloud era.
 

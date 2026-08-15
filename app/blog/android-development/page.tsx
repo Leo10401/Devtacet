@@ -34,11 +34,11 @@ function ArticleJsonLd() {
     headline: 'Android App Development: From Idea to Play Store Launch',
     description:
       'A practical guide to building production Android apps using Kotlin, React Native, and Flutter.',
-    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.vercel.app' },
-    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.vercel.app', logo: { '@type': 'ImageObject', url: 'https://devtacet.vercel.app/icon.svg' } },
+    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me' },
+    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me', logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' } },
     datePublished: '2026-08-15',
     dateModified: '2026-08-15',
-    mainEntityOfPage: 'https://devtacet.vercel.app/blog/android-development',
+    mainEntityOfPage: 'https://devtacet.me/blog/android-development',
     keywords: 'android development, React Native, Flutter, Kotlin, Play Store',
   }
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

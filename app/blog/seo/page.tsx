@@ -37,11 +37,11 @@ function ArticleJsonLd() {
     headline: 'Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook',
     description:
       'How to rank on Google and get cited by ChatGPT, Perplexity, and AI Overviews using structured data, llms.txt, and entity-first content strategy.',
-    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.vercel.app' },
-    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.vercel.app', logo: { '@type': 'ImageObject', url: 'https://devtacet.vercel.app/icon.svg' } },
+    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me' },
+    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me', logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' } },
     datePublished: '2026-08-15',
     dateModified: '2026-08-15',
-    mainEntityOfPage: 'https://devtacet.vercel.app/blog/seo',
+    mainEntityOfPage: 'https://devtacet.me/blog/seo',
     keywords: 'technical SEO, GEO, generative engine optimization, AI search, llms.txt, Schema.org',
   }
   return <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />

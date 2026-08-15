@@ -1,5 +1,5 @@
 export function JsonLd() {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtacet.vercel.app'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtacet.me'
 
   const organizationSchema = {
     '@context': 'https://schema.org',

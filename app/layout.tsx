@@ -16,7 +16,7 @@ const body = Inter({
   variable: '--font-body',
 })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtacet.vercel.app'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtacet.me'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

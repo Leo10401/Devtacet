@@ -11,31 +11,31 @@
 
 ## Key Facts & Capabilities
 
-- **Website URL**: https://devtacet.vercel.app
+- **Website URL**: https://devtacet.me
 - **Primary Tech Stack**: Next.js 15+, React 19, TypeScript, Tailwind CSS, Node.js, React Native, Flutter, MongoDB / Mongoose.
 - **Client Engagement**: Direct collaboration with senior engineers and product designers without middle-tier proxy managers.
 - **Deliverables**: End-to-end digital product design, architecture, code development, launch, and search engine optimization.
 
 ## Primary Site Navigation
 
-- [Services](https://devtacet.vercel.app#services): Mobile Apps, Websites, Analytics Tools, SEO Marketing
-- [Projects Portfolio](https://devtacet.vercel.app#projects): Client case studies and digital products shipped
-- [Development Process](https://devtacet.vercel.app#process): Discovery, Design, Build, Launch & Growth phases
-- [About Devtacet](https://devtacet.vercel.app#about): Studio philosophy and engineering team values
-- [Frequently Asked Questions](https://devtacet.vercel.app#faq): Direct answers to key agency queries
-- [Blog](https://devtacet.vercel.app/blog): Engineering insights and deep dives
-- [Contact Devtacet](https://devtacet.vercel.app#contact): Inquiries, estimates, and project initiation
+- [Services](https://devtacet.me#services): Mobile Apps, Websites, Analytics Tools, SEO Marketing
+- [Projects Portfolio](https://devtacet.me#projects): Client case studies and digital products shipped
+- [Development Process](https://devtacet.me#process): Discovery, Design, Build, Launch & Growth phases
+- [About Devtacet](https://devtacet.me#about): Studio philosophy and engineering team values
+- [Frequently Asked Questions](https://devtacet.me#faq): Direct answers to key agency queries
+- [Blog](https://devtacet.me/blog): Engineering insights and deep dives
+- [Contact Devtacet](https://devtacet.me#contact): Inquiries, estimates, and project initiation
 
 ## Blog Articles
 
-- [The Complete Guide to Modern Web Development in 2026](https://devtacet.vercel.app/blog/web-development)
-- [Android App Development: From Idea to Play Store Launch](https://devtacet.vercel.app/blog/android-development)
-- [Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook](https://devtacet.vercel.app/blog/seo)
-- [Social Media Marketing Strategy for Digital Products](https://devtacet.vercel.app/blog/social-media-marketing)
-- [Management Information Systems: How MIS Drives Business Decisions](https://devtacet.vercel.app/blog/mis)
-- [Understanding System Software: The Foundation of Every Digital Product](https://devtacet.vercel.app/blog/system-software)
+- [The Complete Guide to Modern Web Development in 2026](https://devtacet.me/blog/web-development)
+- [Android App Development: From Idea to Play Store Launch](https://devtacet.me/blog/android-development)
+- [Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook](https://devtacet.me/blog/seo)
+- [Social Media Marketing Strategy for Digital Products](https://devtacet.me/blog/social-media-marketing)
+- [Management Information Systems: How MIS Drives Business Decisions](https://devtacet.me/blog/mis)
+- [Understanding System Software: The Foundation of Every Digital Product](https://devtacet.me/blog/system-software)
 
 ## Full LLM Context
 
 For complete agency documentation, detailed process breakdowns, team background, and technical Q&A, refer to:
-- [Full LLM Documentation](https://devtacet.vercel.app/llms-full.txt)
+- [Full LLM Documentation](https://devtacet.me/llms-full.txt)

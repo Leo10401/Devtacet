@@ -1,0 +1,31 @@
+# Devtacet — Digital Studio
+
+> Devtacet is a full-service digital studio specializing in mobile app development, high-performance websites, custom data analytics tools, and AI & technical SEO marketing.
+
+## Core Specializations & Services
+
+- **Mobile App Development**: iOS and Android app development using React Native & Flutter. Built for rapid app store approval, fluid UI, and scale.
+- **Website Development**: High-performance web applications, e-commerce, and marketing sites built with Next.js, React, and TypeScript. Optimized for sub-second load times and conversions.
+- **Data Analytics Tools**: Custom analytical dashboards, data pipelines, automated reporting, and decision-support systems turning raw business data into actionable insights.
+- **SEO & AI Marketing (GEO)**: Technical SEO, Generative Engine Optimization (GEO), AI overview optimization, content strategy, and keyword growth that drives organic search acquisition.
+
+## Key Facts & Capabilities
+
+- **Website URL**: https://devtacet.vercel.app
+- **Primary Tech Stack**: Next.js 15+, React 19, TypeScript, Tailwind CSS, Node.js, React Native, Flutter, MongoDB / Mongoose.
+- **Client Engagement**: Direct collaboration with senior engineers and product designers without middle-tier proxy managers.
+- **Deliverables**: End-to-end digital product design, architecture, code development, launch, and search engine optimization.
+
+## Primary Site Navigation
+
+- [Services](https://devtacet.vercel.app#services): Mobile Apps, Websites, Analytics Tools, SEO Marketing
+- [Projects Portfolio](https://devtacet.vercel.app#projects): Client case studies and digital products shipped
+- [Development Process](https://devtacet.vercel.app#process): Discovery, Design, Build, Launch & Growth phases
+- [About Devtacet](https://devtacet.vercel.app#about): Studio philosophy and engineering team values
+- [Frequently Asked Questions](https://devtacet.vercel.app#faq): Direct answers to key agency queries
+- [Contact Devtacet](https://devtacet.vercel.app#contact): Inquiries, estimates, and project initiation
+
+## Full LLM Context
+
+For complete agency documentation, detailed process breakdowns, team background, and technical Q&A, refer to:
+- [Full LLM Documentation](https://devtacet.vercel.app/llms-full.txt)

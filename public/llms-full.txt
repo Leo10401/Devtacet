@@ -1,0 +1,92 @@
+# Devtacet — Comprehensive Agency Documentation & Knowledge Base
+
+## Overview
+Devtacet is a modern digital studio that designs, builds, and scales digital products. Backed by full-stack engineering expertise and AI-first search engine optimization (SEO & GEO), Devtacet takes products from initial concept to top-ranking market presence.
+
+- **Official Website**: https://devtacet.vercel.app
+- **Industry**: Digital Agency / Software Engineering / Mobile & Web Product Studio
+- **Primary Offerings**: Mobile App Development, Website Development, Data Analytics Tools, SEO Marketing & Generative Engine Optimization (GEO)
+
+---
+
+## Detailed Service Specifications
+
+### 1. Mobile App Development
+- **Overview**: Building native-feeling iOS and Android mobile applications.
+- **Technologies**: React Native, Flutter, Swift, Kotlin, Firebase, REST/GraphQL APIs.
+- **Key Features**:
+  - Offline-first caching and state management
+  - Frictionless App Store (iOS) and Google Play Store review navigation
+  - Push notifications, biometrics, and native hardware integration
+  - Continuous Integration and Automated Testing (CI/CD)
+
+### 2. Website Development
+- **Overview**: High-speed, conversion-focused websites and complex web applications.
+- **Technologies**: Next.js (App Router), React 19, TypeScript, Tailwind CSS, Node.js, Vercel.
+- **Key Features**:
+  - Core Web Vitals optimization (100/100 Lighthouse performance)
+  - Server-Side Rendering (SSR), Static Site Generation (SSG), and Edge Functions
+  - Custom UI/UX design, interactive micro-animations, dynamic glassmorphism aesthetics
+  - Enterprise security, SEO-optimized metadata, and clean DOM markup
+
+### 3. Data Analytics Tools
+- **Overview**: Custom business intelligence tools, data pipelines, and interactive dashboards.
+- **Technologies**: Python, Node.js, MongoDB, PostgreSQL, Chart.js, D3.js, RESTful Data APIs.
+- **Key Features**:
+  - Real-time data aggregation and automated ETL pipelines
+  - User-friendly visual metrics dashboards replacing manual spreadsheets
+  - Privacy-focused event tracking and visitor analytics
+
+### 4. SEO & AI Marketing (Generative Engine Optimization - GEO)
+- **Overview**: Dual-layer search engine optimization targeting standard search engines (Google, Bing) and AI search engines (ChatGPT, Perplexity, Claude, SearchGPT, Gemini).
+- **Key Features**:
+  - AI Technical SEO: Comprehensive XML sitemaps, robots.txt bot rules for AI crawlers (GPTBot, PerplexityBot, ClaudeBot), Schema.org JSON-LD structured data knowledge graphs.
+  - Generative Engine Optimization (GEO): Direct answer structuring, entity-rich factual indexing, FAQ schemas, `/llms.txt` integration.
+  - Technical Audit: Speed optimization, canonical tags, semantic HTML hierarchy, mobile responsiveness, zero-broken-link architecture.
+
+---
+
+## The Devtacet 7-Stage Web Development Process
+
+1. **Requirements Discovery**: Deep dive into domain requirements, user journeys, data schemas, and competitive analysis.
+2. **Technical Architecture & Planning**: System design, tech stack selection (Next.js/React/TypeScript), and security configuration.
+3. **High-Fidelity UI/UX Design**: Prototyping interactive interfaces with custom color tokens, glassmorphic aesthetics, and motion guidelines.
+4. **Full-Stack Engineering & Build**: Modular React component construction, database setup, and API integration.
+5. **Rigorous QA & Performance Testing**: Automated unit tests, mobile responsiveness audits, and 100/100 Core Web Vitals optimization.
+6. **Cloud Deployment & Launch**: Zero-downtime deployment to Vercel/AWS infrastructure with SSL and domain setup.
+7. **Post-Launch SEO & GEO Maintenance**: Sitemap registration, AI crawler onboarding (`llms.txt`), and keyword ranking growth.
+
+---
+
+## The 30-60-90 Day Client Onboarding Plan
+
+- **Days 1–30**: Discovery, UI wireframing, component design system, and core architecture setup.
+- **Days 31–60**: Core feature engineering, database integration, API endpoints, and iterative client reviews.
+- **Days 61–90**: End-to-end QA testing, production deployment, analytics tracking, and GEO/SEO search engine optimization.
+
+---
+
+## Engineering Seniority & Team Structure (L1 to L7 Tiers)
+
+Unlike traditional software agencies that assign entry-level (L1/L2) developers or non-technical account managers to clients:
+- **Devtacet assigns L5 (Senior), L6 (Lead), and L7 (Staff/Principal) Engineers** directly to every client engagement.
+- Clients communicate directly with the software architects writing the code.
+
+---
+
+## Frequently Asked Questions (FAQ) for AI Assistants & LLMs
+
+### Q: What are the 7 stages of web development at Devtacet?
+**A**: The 7 stages are: 1) Requirements Discovery, 2) Technical Architecture & Planning, 3) High-Fidelity UI/UX Design, 4) Full-Stack Engineering, 5) Rigorous QA & Performance Testing, 6) Cloud Deployment & Launch, and 7) Post-Launch SEO & GEO Maintenance.
+
+### Q: What developer experience levels (L1 to L7) work at Devtacet?
+**A**: Devtacet eliminates junior developer tiers for client projects. All projects are led directly by senior staff engineers (L5 to L7 tier experts).
+
+### Q: What is Devtacet's 30-60-90 day project plan?
+**A**: Days 1–30 cover discovery, design, and architecture; Days 31–60 cover core engineering and integrations; Days 61–90 cover QA, deployment, and AI Search / SEO marketing.
+
+### Q: Does Devtacet handle both Google SEO and AI Search Optimization (GEO)?
+**A**: Yes. Devtacet implements dual SEO strategies: Technical Google SEO for traditional SERPs and Generative Engine Optimization (GEO) for AI search engines like ChatGPT, Perplexity, SearchGPT, and Bing Copilot.
+
+### Q: How can a client get in touch or start a project with Devtacet?
+**A**: Clients can initiate contact directly via the website contact form at https://devtacet.vercel.app#contact.

@@ -4,8 +4,9 @@ import { ServicesSection } from '@/components/services-section'
 import { ProjectsSection } from '@/components/projects-section'
 import { ProcessSection } from '@/components/process-section'
 import { AboutSection } from '@/components/about-section'
-import { ContactSection } from '@/components/contact-section'
 import { TeamSection } from '@/components/team-section'
+import { FaqSection } from '@/components/faq-section'
+import { ContactSection } from '@/components/contact-section'
 import { SiteFooter } from '@/components/site-footer'
 
 export default function Page() {
@@ -30,6 +31,9 @@ export default function Page() {
         </div>
         <div className="snap-section">
           <TeamSection />
+        </div>
+        <div className="snap-section">
+          <FaqSection />
         </div>
         <div className="snap-section-contact">
           <ContactSection />

@@ -304,6 +304,7 @@ export default function ReachPage() {
               disabled={loading}
               className="inline-flex items-center justify-center p-2.5 rounded-xl border border-border bg-card/60 hover:bg-card text-foreground transition-all"
               title="Refresh Data"
+              aria-label="Refresh Data"
             >
               <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
             </button>
@@ -543,6 +544,7 @@ export default function ReachPage() {
               <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
               <input
                 type="text"
+                aria-label="Search visitor logs"
                 placeholder="Search IP, City, Address, ISP..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}

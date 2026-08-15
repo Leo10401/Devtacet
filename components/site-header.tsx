@@ -25,7 +25,7 @@ export function SiteHeader() {
     >
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
         <a href="#" className="flex items-center gap-2">
-          <img src="/devtacet.svg" alt="Devtacet" className="h-8 logo-cyan" />
+          <img src="/devtacet.svg" alt="Devtacet" width="32" height="32" className="h-8 w-8 logo-cyan" />
           <span className="font-display text-lg font-bold tracking-tight">Devtacet</span>
         </a>
 

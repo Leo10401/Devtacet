@@ -9,11 +9,13 @@ import './globals.css'
 const heading = Space_Grotesk({
   subsets: ['latin'],
   variable: '--font-heading',
+  display: 'swap',
 })
 
 const body = Inter({
   subsets: ['latin'],
   variable: '--font-body',
+  display: 'swap',
 })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtacet.me'
@@ -24,8 +26,8 @@ export const metadata: Metadata = {
     google: 'E-P-2wOtDXwNu6MQCf9EMuztuaeEO-TP3bCv-cugbAc',
   },
   title: {
-    default: 'Devtacet — Digital Studio | Mobile Apps, Websites, Analytics & SEO',
-    template: '%s | Devtacet — Digital Studio',
+    default: 'Devtacet - Digital Studio | Mobile Apps, Websites, Analytics & SEO',
+    template: '%s | Devtacet - Digital Studio',
   },
   description:
     'Devtacet is a full-service digital studio building mobile apps, high-performance websites, custom data analytics tools, and AI-driven SEO marketing solutions.',
@@ -65,7 +67,7 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: 'Devtacet — Digital Studio | Mobile Apps, Websites, Analytics & SEO',
+    title: 'Devtacet - Digital Studio | Mobile Apps, Websites, Analytics & SEO',
     description:
       'Devtacet builds mobile apps, websites, and data analytics tools with SEO marketing that gets you found across Google & AI search engines.',
     url: siteUrl,
@@ -77,13 +79,13 @@ export const metadata: Metadata = {
         url: '/placeholder-logo.png',
         width: 1200,
         height: 630,
-        alt: 'Devtacet — Digital Studio',
+        alt: 'Devtacet - Digital Studio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Devtacet — Digital Studio | Mobile Apps, Websites, Analytics & SEO',
+    title: 'Devtacet - Digital Studio | Mobile Apps, Websites, Analytics & SEO',
     description:
       'Devtacet builds mobile apps, websites, and data analytics tools backed by technical SEO & AI search optimization.',
     images: ['/placeholder-logo.png'],

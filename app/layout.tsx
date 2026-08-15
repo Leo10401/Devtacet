@@ -20,6 +20,9 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://devtacet.vercel.app
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
+  verification: {
+    google: 'C3C58xlHMhfCs-pYo2pG9ZQ5fAguPoM4Q-PLB5WBbYg',
+  },
   title: {
     default: 'Devtacet — Digital Studio | Mobile Apps, Websites, Analytics & SEO',
     template: '%s | Devtacet — Digital Studio',

@@ -273,39 +273,43 @@ export default function ReachPage() {
 
           <div className="flex flex-wrap items-center gap-3">
             <button
+              type="button"
               onClick={logPreciseVisit}
               disabled={logging}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-gradient-to-r from-emerald-500 to-teal-600 text-white font-medium text-sm transition-all hover:opacity-90 active:scale-95 disabled:opacity-50 shadow-lg shadow-emerald-500/20"
               title="Request high-accuracy GPS coordinates & street address"
             >
               {logging ? (
-                <RefreshCw className="w-4 h-4 animate-spin" />
+                <RefreshCw className="w-4 h-4 animate-spin" aria-hidden="true" />
               ) : (
-                <Crosshair className="w-4 h-4 text-emerald-100 animate-pulse" />
+                <Crosshair className="w-4 h-4 text-emerald-100 animate-pulse" aria-hidden="true" />
               )}
               <span>{logging ? 'Locating...' : 'Log Precise GPS Location'}</span>
             </button>
 
             <button
+              type="button"
               onClick={logCurrentVisit}
               disabled={logging}
               className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl bg-primary text-primary-foreground font-medium text-sm transition-all hover:opacity-90 active:scale-95 disabled:opacity-50 shadow-lg shadow-primary/20"
             >
               {logging ? (
-                <RefreshCw className="w-4 h-4 animate-spin" />
+                <RefreshCw className="w-4 h-4 animate-spin" aria-hidden="true" />
               ) : (
-                <Send className="w-4 h-4" />
+                <Send className="w-4 h-4" aria-hidden="true" />
               )}
               <span>Log IP Location</span>
             </button>
 
             <button
+              type="button"
               onClick={fetchReachData}
               disabled={loading}
+              aria-label="Refresh Data"
               className="inline-flex items-center justify-center p-2.5 rounded-xl border border-border bg-card/60 hover:bg-card text-foreground transition-all"
               title="Refresh Data"
             >
-              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -540,8 +544,12 @@ export default function ReachPage() {
             </div>
 
             <div className="relative w-full sm:w-72">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              <label htmlFor="search-logs" className="sr-only">
+                Search logs
+              </label>
+              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
               <input
+                id="search-logs"
                 type="text"
                 placeholder="Search IP, City, Address, ISP..."
                 value={searchTerm}

@@ -251,7 +251,7 @@ export default function ReachPage() {
     <div className="min-h-screen bg-background text-foreground flex flex-col font-sans">
       <SiteHeader />
 
-      <main className="flex-1 max-w-6xl w-full mx-auto px-4 md:px-6 pt-24 pb-16">
+      <main id="main" className="flex-1 max-w-6xl w-full mx-auto px-4 md:px-6 pt-24 pb-16">
         {/* Top Header Banner */}
         <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
           <div>

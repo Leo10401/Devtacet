@@ -118,6 +118,9 @@ export default function RootLayout({
         <JsonLd />
       </head>
       <body className="antialiased font-sans">
+        <a href="#main" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 z-[10000] rounded-md bg-primary px-4 py-2 text-primary-foreground font-medium outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background">
+          Skip to main content
+        </a>
         <DevtacetLoader />
         <VisitorTracker />
         {children}

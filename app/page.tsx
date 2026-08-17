@@ -13,7 +13,7 @@ export default function Page() {
   return (
     <>
       <SiteHeader />
-      <main className="snap-container">
+      <main id="main" className="snap-container">
         <div className="snap-section-flush">
           <Hero />
         </div>

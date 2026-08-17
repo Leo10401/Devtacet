@@ -25,7 +25,7 @@ export default function BlogLayout({
   return (
     <>
       <SiteHeader />
-      <main className="min-h-svh pt-20 pb-16">
+      <main id="main" className="min-h-svh pt-20 pb-16">
         {children}
       </main>
       <div className="border-t border-border bg-card">

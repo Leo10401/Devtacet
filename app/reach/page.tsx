@@ -304,8 +304,9 @@ export default function ReachPage() {
               disabled={loading}
               className="inline-flex items-center justify-center p-2.5 rounded-xl border border-border bg-card/60 hover:bg-card text-foreground transition-all"
               title="Refresh Data"
+              aria-label="Refresh Data"
             >
-              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} />
+              <RefreshCw className={`w-4 h-4 ${loading ? 'animate-spin' : ''}`} aria-hidden="true" />
             </button>
           </div>
         </div>
@@ -540,8 +541,10 @@ export default function ReachPage() {
             </div>
 
             <div className="relative w-full sm:w-72">
-              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+              <label htmlFor="search-logs" className="sr-only">Search logs</label>
+              <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" aria-hidden="true" />
               <input
+                id="search-logs"
                 type="text"
                 placeholder="Search IP, City, Address, ISP..."
                 value={searchTerm}

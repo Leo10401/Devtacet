@@ -41,7 +41,7 @@ const weDont = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="mx-auto max-w-6xl px-4 py-10 md:px-6 md:py-14">
+    <section id="about" className="mx-auto w-full max-w-7xl px-8 py-10 md:py-14 xl:px-16">
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}

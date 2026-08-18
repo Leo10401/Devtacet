@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/placeholder-logo.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Devtacet - Digital Studio',
@@ -88,7 +88,7 @@ export const metadata: Metadata = {
     title: 'Devtacet - Digital Studio | Mobile Apps, Websites, Analytics & SEO',
     description:
       'Devtacet builds mobile apps, websites, and data analytics tools backed by technical SEO & AI search optimization.',
-    images: ['/placeholder-logo.png'],
+    images: ['/og-image.png'],
     creator: '@devtacet',
   },
   icons: {
@@ -97,8 +97,24 @@ export const metadata: Metadata = {
         url: '/icon.svg',
         type: 'image/svg+xml',
       },
+      {
+        url: '/icon-light-32x32.png',
+        sizes: '32x32',
+        type: 'image/png',
+      },
+      {
+        url: '/favicon.ico',
+        sizes: 'any',
+      },
     ],
-    apple: '/apple-icon.png',
+    shortcut: '/icon.svg',
+    apple: [
+      {
+        url: '/apple-icon.png',
+        sizes: '180x180',
+        type: 'image/png',
+      },
+    ],
   },
 }
 
@@ -115,6 +131,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`bg-background ${heading.variable} ${body.variable}`}>
       <head>
+        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+        <link rel="alternate icon" href="/favicon.ico" />
+        <link rel="apple-touch-icon" href="/apple-icon.png" />
         <JsonLd />
       </head>
       <body className="antialiased font-sans">

@@ -45,7 +45,7 @@ const steps = [
 export function ProcessSection() {
   return (
     <section id="process" className="border-y border-border bg-card">
-      <div className="mx-auto max-w-6xl px-4 py-16 md:px-6 md:py-20">
+      <div className="mx-auto w-full max-w-7xl px-8 py-16 md:py-20 xl:px-16">
         <div className="mb-10 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}

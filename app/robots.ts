@@ -8,10 +8,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/reach', '/api/reach'],
+        disallow: ['/samosa', '/samosa/*', '/reach', '/reach/*', '/api', '/api/*'],
       },
       {
         userAgent: [
+          'Googlebot',
+          'Bingbot',
           'GPTBot',
           'OAI-SearchBot',
           'ChatGPT-User',
@@ -27,7 +29,7 @@ export default function robots(): MetadataRoute.Robots {
           'Meta-ExternalAgent',
         ],
         allow: '/',
-        disallow: ['/reach', '/api/reach'],
+        disallow: ['/samosa', '/samosa/*', '/reach', '/reach/*', '/api', '/api/*'],
       },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,

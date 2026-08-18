@@ -5,38 +5,71 @@ import ChromaGrid from './ChromaGrid'
 
 const teamMembers = [
   {
-    image: 'https://i.pravatar.cc/300?img=12',
-    title: 'Kanha',
-    subtitle: 'Founder & Lead Developer',
-    handle: '@kanha',
-    borderColor: 'rgba(6, 182, 212, 0.4)',
-    gradient: 'linear-gradient(145deg, rgba(6, 182, 212, 0.15), transparent)',
-    url: '#',
+    image: '/Ayush_Kumar_Yadav.png',
+    title: 'Ayush Kumar Yadav',
+    subtitle: 'Founder & Lead Engineer',
+    handle: '@ayush',
+    borderColor: 'rgba(168, 85, 247, 0.5)',
+    gradient: 'linear-gradient(145deg, rgba(168, 85, 247, 0.18), transparent)',
+    accentColor: '#a855f7',
+    socials: {
+      linkedin: 'https://linkedin.com/in/ayush-kumar-yadav',
+      github: 'https://github.com/ayush',
+      portfolio: 'https://devtacet.com',
+      email: 'mailto:ayush@devtacet.com',
+    },
   },
   {
-    image: 'https://i.pravatar.cc/300?img=33',
-    title: 'Arjun Mehta',
-    subtitle: 'Backend Engineer',
-    handle: '@arjun',
-    borderColor: 'rgba(139, 92, 246, 0.4)',
-    gradient: 'linear-gradient(210deg, rgba(139, 92, 246, 0.15), transparent)',
-    url: '#',
+    image: '/Aditya_Mukerji.png',
+    title: 'Aditya Mukerji',
+    subtitle: 'Technical Architect',
+    handle: '@aditya',
+    borderColor: 'rgba(6, 182, 212, 0.5)',
+    gradient: 'linear-gradient(210deg, rgba(6, 182, 212, 0.18), transparent)',
+    accentColor: '#06b6d4',
+    socials: {
+      linkedin: 'https://linkedin.com/in/aditya-mukerji',
+      github: 'https://github.com/aditya',
+      portfolio: 'https://devtacet.com',
+      email: 'mailto:aditya@devtacet.com',
+    },
   },
   {
-    image: 'https://i.pravatar.cc/300?img=47',
-    title: 'Priya Sharma',
-    subtitle: 'UI/UX Designer',
-    handle: '@priya',
-    borderColor: 'rgba(245, 158, 11, 0.4)',
-    gradient: 'linear-gradient(165deg, rgba(245, 158, 11, 0.15), transparent)',
-    url: '#',
+    image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400&q=80',
+    title: 'Aniket Chakraborty',
+    subtitle: 'Frontend & UI/UX Lead',
+    handle: '@aniket',
+    borderColor: 'rgba(16, 185, 129, 0.5)',
+    gradient: 'linear-gradient(165deg, rgba(16, 185, 129, 0.18), transparent)',
+    accentColor: '#10b981',
+    socials: {
+      linkedin: 'https://linkedin.com/in/aniket-chakraborty',
+      github: 'https://github.com/aniket',
+      portfolio: 'https://devtacet.com',
+      email: 'mailto:aniket@devtacet.com',
+    },
+  },
+  {
+    image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&q=80',
+    title: 'Arpan Ganguly',
+    subtitle: 'Backend & Cloud Engineer',
+    handle: '@arpan',
+    borderColor: 'rgba(245, 158, 11, 0.5)',
+    gradient: 'linear-gradient(195deg, rgba(245, 158, 11, 0.18), transparent)',
+    accentColor: '#f59e0b',
+    socials: {
+      linkedin: 'https://linkedin.com/in/arpan-ganguly',
+      github: 'https://github.com/arpan',
+      portfolio: 'https://devtacet.com',
+      email: 'mailto:arpan@devtacet.com',
+    },
   },
 ]
 
 export function TeamSection() {
   return (
     <section id="team" className="relative pt-16 pb-8 md:pt-20 md:pb-12">
-      <div className="mx-auto max-w-6xl px-4 md:px-6">
+      <div className="mx-auto w-full max-w-7xl px-8 xl:px-16">
         <div className="mb-6 flex flex-col gap-4 md:mb-8 md:flex-row md:items-end md:justify-between">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
@@ -67,7 +100,7 @@ export function TeamSection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative mx-auto max-w-5xl px-4 md:px-6"
+        className="relative mx-auto w-full max-w-7xl px-8 xl:px-16"
       >
         <ChromaGrid
           items={teamMembers}

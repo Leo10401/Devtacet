@@ -9,7 +9,7 @@ export function JsonLd() {
     legalName: 'Devtacet Digital Studio',
     url: baseUrl,
     logo: `${baseUrl}/icon.svg`,
-    image: `${baseUrl}/placeholder-logo.png`,
+    image: `${baseUrl}/og-image.png`,
     description:
       'Devtacet is a digital studio building mobile apps, websites, and data analytics tools, backed by SEO marketing that gets you found.',
     priceRange: '$$$',

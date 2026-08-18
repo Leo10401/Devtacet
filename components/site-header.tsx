@@ -23,7 +23,7 @@ export function SiteHeader() {
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
       className="fixed inset-x-0 top-0 z-50 border-b border-border bg-background/80 backdrop-blur-md"
     >
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 md:px-6">
+      <div className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between px-8 xl:px-16">
         <a href="#" className="flex items-center gap-2">
           <img src="/devtacet.svg" alt="Devtacet" width="32" height="32" className="h-8 w-8 logo-cyan" />
           <span className="font-display text-lg font-bold tracking-tight">Devtacet</span>

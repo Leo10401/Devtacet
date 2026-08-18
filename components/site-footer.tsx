@@ -1,7 +1,7 @@
 export function SiteFooter() {
   return (
-    <footer className="w-full border-t border-border/40 py-6">
-      <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 md:flex-row md:items-center md:justify-between md:px-6">
+    <footer className="w-full border-t border-border/40 py-3 sm:py-4">
+      <div className="mx-auto flex w-full max-w-7xl flex-col gap-4 px-8 md:flex-row md:items-center md:justify-between xl:px-16">
         <div>
           <img src="/devtacet.svg" alt="Devtacet" className="h-8 logo-cyan" />
         </div>

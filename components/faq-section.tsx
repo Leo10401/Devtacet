@@ -45,7 +45,7 @@ export function FaqSection() {
   }
 
   return (
-    <section id="faq" className="mx-auto max-w-6xl px-4 py-12 md:px-6 md:py-16">
+    <section id="faq" className="mx-auto w-full max-w-7xl px-8 py-12 md:py-16 xl:px-16">
       <div className="mb-8 flex flex-col gap-3 md:mb-12">
         <motion.div
           initial={{ opacity: 0, y: 16 }}

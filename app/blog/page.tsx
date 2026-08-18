@@ -1,50 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { ArrowRight, Clock, Sparkles, Globe, TrendingUp, Share2, BarChart3, Cpu, Smartphone, Code } from 'lucide-react'
+import { ArrowRight, Clock, TrendingUp, Share2, BarChart3, Cpu, Smartphone, Code2 } from 'lucide-react'
 import Link from 'next/link'
 
 const posts = [
-  {
-    slug: 'web-development',
-    title: 'Modern Web Development',
-    subtitle: 'The Complete Guide for 2026',
-    excerpt:
-      'From Next.js and React 19 to edge computing and server components — everything you need to know about building fast, scalable web applications.',
-    category: 'Web Development',
-    readTime: '10 min read',
-    gradient: 'from-sky-500/10',
-    orb: 'bg-sky-500/10',
-    accent: 'text-sky-300',
-    accentBg: 'bg-sky-500/15',
-    accentRing: 'ring-sky-400/30',
-    icon: Code,
-    tags: ['Next.js', 'React 19', 'TypeScript'],
-    stats: [
-      { label: 'Frontend', value: '92%', width: 'w-[92%]', bar: 'from-sky-400 to-blue-500' },
-      { label: 'Backend', value: '78%', width: 'w-[78%]', bar: 'from-sky-400 to-indigo-500' },
-    ],
-  },
-  {
-    slug: 'android-development',
-    title: 'Android App Development',
-    subtitle: 'Idea to Play Store Launch',
-    excerpt:
-      'A practical roadmap covering Kotlin, React Native, Flutter, UI/UX principles, and the Play Store review process.',
-    category: 'Mobile Development',
-    readTime: '9 min read',
-    gradient: 'from-emerald-500/10',
-    orb: 'bg-emerald-500/10',
-    accent: 'text-emerald-300',
-    accentBg: 'bg-emerald-500/15',
-    accentRing: 'ring-emerald-400/30',
-    icon: Smartphone,
-    tags: ['React Native', 'Flutter', 'Kotlin'],
-    stats: [
-      { label: 'Cross-Platform', value: '85%', width: 'w-[85%]', bar: 'from-emerald-400 to-teal-500' },
-      { label: 'Native Perf', value: '96%', width: 'w-[96%]', bar: 'from-emerald-400 to-green-500' },
-    ],
-  },
   {
     slug: 'seo',
     title: 'Technical SEO & GEO',
@@ -53,16 +13,15 @@ const posts = [
       'How to rank on Google and get cited by ChatGPT, Perplexity, and AI Overviews using structured data and entity-first strategy.',
     category: 'SEO & GEO',
     readTime: '11 min read',
-    gradient: 'from-amber-500/10',
-    orb: 'bg-amber-500/10',
-    accent: 'text-amber-300',
-    accentBg: 'bg-amber-500/15',
-    accentRing: 'ring-amber-400/30',
     icon: TrendingUp,
+    iconColor: '#f59e0b',
+    badgeBg: 'bg-amber-500/10',
+    badgeBorder: 'border-amber-500/20',
+    badgeText: 'text-amber-300',
     tags: ['llms.txt', 'Schema.org', 'JSON-LD'],
     stats: [
-      { label: 'Google SERP', value: '88%', width: 'w-[88%]', bar: 'from-amber-400 to-orange-500' },
-      { label: 'AI Search', value: '72%', width: 'w-[72%]', bar: 'from-amber-400 to-yellow-500' },
+      { label: 'Google SERP', value: '88%', bar: 'from-[#f97316] via-[#fb923c] to-[#fdba74]' },
+      { label: 'AI Search', value: '72%', bar: 'from-[#eab308] via-[#facc15] to-[#fde047]' },
     ],
   },
   {
@@ -73,36 +32,72 @@ const posts = [
       'Build a repeatable SMM playbook covering content calendars, engagement loops, paid amplification, and revenue-tied metrics.',
     category: 'Marketing',
     readTime: '8 min read',
-    gradient: 'from-pink-500/10',
-    orb: 'bg-pink-500/10',
-    accent: 'text-pink-300',
-    accentBg: 'bg-pink-500/15',
-    accentRing: 'ring-pink-400/30',
     icon: Share2,
+    iconColor: '#ec4899',
+    badgeBg: 'bg-pink-500/10',
+    badgeBorder: 'border-pink-500/20',
+    badgeText: 'text-pink-300',
     tags: ['Content', 'Engagement', 'Paid Social'],
     stats: [
-      { label: 'Engagement', value: '76%', width: 'w-[76%]', bar: 'from-pink-400 to-rose-500' },
-      { label: 'Conversion', value: '64%', width: 'w-[64%]', bar: 'from-pink-400 to-fuchsia-500' },
+      { label: 'Engagement', value: '78%', bar: 'from-[#f43f5e] via-[#fb7185] to-[#fda4af]' },
+      { label: 'Conversion', value: '84%', bar: 'from-[#a855f7] via-[#c084fc] to-[#e879f9]' },
+    ],
+  },
+  {
+    slug: 'web-development',
+    title: 'Modern Web Development',
+    subtitle: 'The Complete Guide for 2026',
+    excerpt:
+      'From Next.js and React 19 to edge computing and server components — everything you need to know about building fast, scalable web applications.',
+    category: 'Web Engineering',
+    readTime: '10 min read',
+    icon: Code2,
+    iconColor: '#06b6d4',
+    badgeBg: 'bg-cyan-500/10',
+    badgeBorder: 'border-cyan-500/20',
+    badgeText: 'text-cyan-300',
+    tags: ['Next.js', 'React 19', 'TypeScript'],
+    stats: [
+      { label: 'Frontend Architecture', value: '94%', bar: 'from-[#06b6d4] via-[#38bdf8] to-[#60a5fa]' },
+      { label: 'Core Web Vitals', value: '98%', bar: 'from-[#3b82f6] via-[#60a5fa] to-[#93c5fd]' },
+    ],
+  },
+  {
+    slug: 'android-development',
+    title: 'Android & Mobile Development',
+    subtitle: 'Idea to Play Store Launch',
+    excerpt:
+      'A practical roadmap covering Kotlin, React Native, Flutter, UI/UX principles, and the Play Store review process.',
+    category: 'Mobile Apps',
+    readTime: '9 min read',
+    icon: Smartphone,
+    iconColor: '#10b981',
+    badgeBg: 'bg-emerald-500/10',
+    badgeBorder: 'border-emerald-500/20',
+    badgeText: 'text-emerald-300',
+    tags: ['React Native', 'Flutter', 'Kotlin'],
+    stats: [
+      { label: 'Native Performance', value: '96%', bar: 'from-[#10b981] via-[#34d399] to-[#6ee7b7]' },
+      { label: 'Cross-Platform Reach', value: '88%', bar: 'from-[#14b8a6] via-[#2dd4bf] to-[#5eead4]' },
     ],
   },
   {
     slug: 'mis',
     title: 'Management Information Systems',
-    subtitle: 'Data‑Driven Business Decisions',
+    subtitle: 'Data-Driven Business Decisions',
     excerpt:
       'How modern MIS architectures turn raw operational data into executive dashboards, automated reports, and competitive advantage.',
     category: 'Data & Analytics',
     readTime: '8 min read',
-    gradient: 'from-cyan-500/10',
-    orb: 'bg-cyan-500/10',
-    accent: 'text-cyan-300',
-    accentBg: 'bg-cyan-500/15',
-    accentRing: 'ring-cyan-400/30',
     icon: BarChart3,
-    tags: ['Dashboards', 'ETL', 'Reporting'],
+    iconColor: '#8b5cf6',
+    badgeBg: 'bg-purple-500/10',
+    badgeBorder: 'border-purple-500/20',
+    badgeText: 'text-purple-300',
+    tags: ['Dashboards', 'ETL', 'Node.js'],
     stats: [
-      { label: 'Data Quality', value: '91%', width: 'w-[91%]', bar: 'from-cyan-400 to-sky-500' },
-      { label: 'Automation', value: '68%', width: 'w-[68%]', bar: 'from-cyan-400 to-teal-500' },
+      { label: 'Data Quality & Flow', value: '92%', bar: 'from-[#8b5cf6] via-[#a855f7] to-[#c084fc]' },
+      { label: 'Automated Dashboards', value: '85%', bar: 'from-[#6366f1] via-[#818cf8] to-[#a5b4fc]' },
     ],
   },
   {
@@ -113,143 +108,132 @@ const posts = [
       'Operating systems, middleware, drivers, and runtime environments — the invisible infrastructure that powers every digital product.',
     category: 'Engineering',
     readTime: '7 min read',
-    gradient: 'from-fuchsia-500/10',
-    orb: 'bg-fuchsia-500/10',
-    accent: 'text-fuchsia-300',
-    accentBg: 'bg-fuchsia-500/15',
-    accentRing: 'ring-fuchsia-400/30',
     icon: Cpu,
+    iconColor: '#d946ef',
+    badgeBg: 'bg-fuchsia-500/10',
+    badgeBorder: 'border-fuchsia-500/20',
+    badgeText: 'text-fuchsia-300',
     tags: ['OS', 'Middleware', 'Runtime'],
     stats: [
-      { label: 'Kernel', value: '82%', width: 'w-[82%]', bar: 'from-fuchsia-400 to-purple-500' },
-      { label: 'Drivers', value: '58%', width: 'w-[58%]', bar: 'from-fuchsia-400 to-violet-500' },
+      { label: 'Kernel Architecture', value: '90%', bar: 'from-[#d946ef] via-[#e879f9] to-[#f0abfc]' },
+      { label: 'Hardware Drivers', value: '75%', bar: 'from-[#ec4899] via-[#f472b6] to-[#fbcfe8]' },
     ],
   },
 ]
 
 const container = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.1, delayChildren: 0.2 } },
+  show: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
 }
 
 const item = {
-  hidden: { opacity: 0, y: 32 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: [0.22, 1, 0.36, 1] } },
+  hidden: { opacity: 0, y: 24 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] } },
 }
 
 export default function BlogIndexPage() {
   return (
-    <div className="mx-auto max-w-6xl px-6 pt-20 md:px-10 md:pt-28">
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-16 md:pt-24 pb-20">
       {/* Heading */}
-      <motion.h1
-        initial={{ opacity: 0, y: 24 }}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.7, delay: 0.1 }}
-        className="mt-6 text-center font-display text-4xl font-semibold tracking-tight md:text-6xl"
+        transition={{ duration: 0.6 }}
+        className="text-center"
       >
-        Deep Dives to Accelerate
-        <span className="block text-primary">Your Product</span>
-      </motion.h1>
-      <motion.p
-        initial={{ opacity: 0, y: 16 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        className="mx-auto mt-5 max-w-2xl text-center text-base font-normal text-muted-foreground md:text-lg"
-      >
-        Practical guides on web development, mobile apps, SEO, marketing, data systems, and infrastructure — built to help teams ship faster.
-      </motion.p>
+        <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-white">
+          Deep Dives to Accelerate
+          <span className="block bg-gradient-to-r from-[#06b6d4] via-[#38bdf8] to-[#818cf8] bg-clip-text text-transparent mt-1">
+            Your Product
+          </span>
+        </h1>
+        <p className="mx-auto mt-4 max-w-2xl text-sm sm:text-base text-zinc-400 leading-relaxed font-normal">
+          Practical guides on web development, mobile apps, SEO, marketing, data systems, and infrastructure — built to help teams ship faster.
+        </p>
+      </motion.div>
 
       {/* Grid */}
       <motion.div
         variants={container}
         initial="hidden"
         animate="show"
-        className="mt-12 grid grid-cols-1 gap-6 pb-16 md:gap-8 lg:grid-cols-2"
+        className="mt-12 grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2"
       >
         {posts.map((post) => {
           const Icon = post.icon
           return (
             <motion.div key={post.slug} variants={item}>
-              <Link href={`/blog/${post.slug}`} className="group block">
-                <section
-                  className="relative overflow-hidden rounded-3xl bg-white/[0.04] p-5 ring-1 ring-white/10 transition-all duration-300 hover:ring-white/20 hover:shadow-lg hover:shadow-primary/5 md:p-6"
-                >
-                  {/* Gradient overlay */}
-                  <div
-                    className={`pointer-events-none absolute inset-0 bg-gradient-to-br ${post.gradient} via-transparent to-transparent`}
-                  />
-                  {/* Blur orb */}
-                  <div
-                    className={`absolute -right-24 -top-24 h-72 w-72 rounded-full ${post.orb} blur-3xl`}
-                  />
+              <Link href={`/blog/${post.slug}`} className="group block h-full">
+                <article className="relative h-full flex flex-col justify-between overflow-hidden rounded-3xl bg-[#0b0c10] border border-zinc-800/90 p-6 sm:p-7 shadow-xl transition-all duration-300 group-hover:border-zinc-700 group-hover:shadow-2xl">
+                  {/* Subtle top card glow on hover */}
+                  <div className="absolute -top-24 -right-24 size-48 rounded-full bg-purple-500/5 blur-2xl pointer-events-none group-hover:bg-purple-500/10 transition-colors" />
 
-                  {/* Inset UI preview */}
-                  <div className="relative rounded-2xl bg-gradient-to-b from-white/5 to-white/[0.03] p-4 ring-1 ring-white/10 backdrop-blur">
-                    {/* Preview header */}
-                    <div className="mb-3 flex items-center gap-2 text-sm text-white/80">
-                      <Icon className={`size-4 ${post.accent}`} />
-                      <span className="font-medium">{post.category}</span>
-                    </div>
-
-                    {/* Mock stat rows */}
-                    <div className="space-y-3">
-                      {post.stats.map((stat) => (
-                        <div
-                          key={stat.label}
-                          className="rounded-xl bg-white/[0.04] p-3 ring-1 ring-white/10"
-                        >
-                          <div className="flex items-center justify-between">
-                            <p className="text-sm font-medium text-white/90">{stat.label}</p>
-                            <p className="text-xs text-white/60">{stat.value}</p>
-                          </div>
-                          <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-white/10">
-                            <motion.div
-                              className={`h-full rounded-full bg-gradient-to-r ${stat.bar}`}
-                              initial={{ width: '0%' }}
-                              whileInView={{ width: stat.value }}
-                              viewport={{ once: true, margin: '-60px' }}
-                              transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-                            />
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    {/* Preview footer */}
-                    <div className="mt-4 flex items-center justify-between">
-                      <div
-                        className={`inline-flex items-center gap-2 rounded-full ${post.accentBg} px-3 py-1.5 text-xs ring-1 ${post.accentRing}`}
-                      >
-                        <Globe className={`size-3.5 ${post.accent}`} />
-                        <span className={post.accent}>{post.readTime}</span>
+                  <div>
+                    {/* Inset Visual Preview Box */}
+                    <div className="relative rounded-2xl bg-[#14151e]/90 border border-zinc-800/80 p-4 sm:p-5 shadow-inner">
+                      {/* Header */}
+                      <div className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-zinc-300">
+                        <Icon className="size-3.5" style={{ color: post.iconColor }} />
+                        <span>{post.category}</span>
                       </div>
-                      <div className="flex items-center gap-2">
+
+                      {/* Stat Progress Rows */}
+                      <div className="space-y-3.5">
+                        {post.stats.map((stat) => (
+                          <div key={stat.label}>
+                            <div className="flex items-center justify-between text-xs sm:text-sm font-medium">
+                              <span className="text-zinc-300">{stat.label}</span>
+                              <span className="text-zinc-400 font-mono text-xs">{stat.value}</span>
+                            </div>
+                            <div className="mt-2 h-2 w-full overflow-hidden rounded-full bg-zinc-800/80">
+                              <motion.div
+                                className={`h-full rounded-full bg-gradient-to-r ${stat.bar}`}
+                                initial={{ width: '0%' }}
+                                whileInView={{ width: stat.value }}
+                                viewport={{ once: true, margin: '-40px' }}
+                                transition={{ duration: 1, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+                              />
+                            </div>
+                          </div>
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Middle Info Bar: Read-time & Tags */}
+                    <div className="mt-5 flex items-center justify-between flex-wrap gap-2.5">
+                      <div
+                        className={`inline-flex items-center gap-1.5 rounded-full px-3 py-1 text-xs font-medium border ${post.badgeBg} ${post.badgeBorder} ${post.badgeText}`}
+                      >
+                        <Clock className="size-3" />
+                        <span>{post.readTime}</span>
+                      </div>
+                      <div className="flex items-center gap-1.5 flex-wrap">
                         {post.tags.map((tag) => (
                           <span
                             key={tag}
-                            className="rounded-full bg-white/5 px-2 py-0.5 text-[11px] text-white/50 ring-1 ring-white/10"
+                            className="rounded-lg bg-zinc-900 border border-zinc-800 px-2.5 py-1 text-[11px] font-medium text-zinc-400"
                           >
                             {tag}
                           </span>
                         ))}
                       </div>
                     </div>
+
+                    {/* Title & Description */}
+                    <h2 className="mt-5 font-display text-xl sm:text-2xl font-bold tracking-tight text-white transition-colors group-hover:text-primary">
+                      {post.title}
+                    </h2>
+                    <p className="mt-2 text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
+                      {post.excerpt}
+                    </p>
                   </div>
 
-                  {/* Title & description */}
-                  <h2 className="relative mt-5 font-display text-xl font-semibold tracking-tight transition-colors group-hover:text-primary md:text-2xl">
-                    {post.title}
-                  </h2>
-                  <p className="relative mt-1.5 flex items-center gap-2 text-sm text-white/70">
-                    {post.excerpt}
-                  </p>
-
-                  {/* Read more */}
-                  <div className="relative mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary opacity-0 transition-all duration-300 group-hover:opacity-100">
-                    Read article
-                    <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+                  {/* Read Article Footer Link */}
+                  <div className="mt-5 flex items-center gap-1.5 text-xs sm:text-sm font-semibold text-zinc-400 transition-colors group-hover:text-white">
+                    <span>Read article</span>
+                    <ArrowRight className="size-3.5 transition-transform group-hover:translate-x-1" />
                   </div>
-                </section>
+                </article>
               </Link>
             </motion.div>
           )

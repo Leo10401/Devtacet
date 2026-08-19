@@ -14,28 +14,14 @@ export function middleware(req: NextRequest) {
   if (hostWithoutPort.endsWith('.localhost')) {
     subdomain = hostWithoutPort.replace('.localhost', '')
   } else {
-    // Check production custom domains (e.g., samosa.example.com)
-    // You can set NEXT_PUBLIC_ROOT_DOMAIN in .env (e.g., example.com)
-    const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || ''
+    // Check production custom domains (e.g., samosa.devtacet.me)
+    const rootDomain = process.env.NEXT_PUBLIC_ROOT_DOMAIN || 'devtacet.me'
     if (rootDomain && hostWithoutPort.endsWith(`.${rootDomain}`)) {
       subdomain = hostWithoutPort.replace(`.${rootDomain}`, '')
-    } else {
-      // Fallback: extract first part if multiple dots exist and not IP
-      const parts = hostWithoutPort.split('.')
-      if (parts.length > 2 && !/^\d+$/.test(parts[parts.length - 1])) {
-        subdomain = parts[0]
-      }
     }
   }
 
-  // Redirect www to canonical non-www hostname
-  if (hostWithoutPort === 'www.devtacet.me' || hostWithoutPort.startsWith('www.')) {
-    const canonicalHost = hostWithoutPort.replace(/^www\./, '')
-    const targetUrl = new URL(`${url.pathname}${url.search}`, `https://${canonicalHost}`)
-    return NextResponse.redirect(targetUrl, 301)
-  }
-
-  // Ignore 'www' or empty subdomains
+  // Ignore 'www' or empty/root subdomains
   if (subdomain && subdomain !== 'www' && subdomain !== '') {
     // Rewrite path internally to /[subdomain] or /[subdomain]/path
     const searchParams = url.searchParams.toString()

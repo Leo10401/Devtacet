@@ -49,6 +49,7 @@ const ChromaGrid = ({
   const setY = useRef(null)
   const pos = useRef({ x: 0, y: 0 })
   const [hoveredIndex, setHoveredIndex] = useState(null)
+  const [activeMobileIndex, setActiveMobileIndex] = useState(null)
 
   const demo = [
     {
@@ -182,16 +183,17 @@ const ChromaGrid = ({
     >
       {data.map((c, i) => {
         const socials = c.socials || {}
-        const isHovered = hoveredIndex === i
+        const isVisible = hoveredIndex === i || activeMobileIndex === i
 
         return (
           <article
             key={i}
             tabIndex={0}
+            onClick={() => setActiveMobileIndex((prev) => (prev === i ? null : i))}
             onMouseMove={handleCardMove}
             onMouseEnter={() => setHoveredIndex(i)}
             onMouseLeave={() => setHoveredIndex(null)}
-            className="group relative flex w-full flex-col overflow-hidden rounded-[20px] border transition-all duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+            className="group relative flex w-full cursor-pointer flex-col overflow-hidden rounded-[20px] border transition-all duration-300 hover:scale-[1.02] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background"
             style={{
               borderColor: c.borderColor || 'rgba(255,255,255,0.15)',
               background: c.gradient || 'transparent',
@@ -219,8 +221,8 @@ const ChromaGrid = ({
 
                 {/* Floating Social / Contact Tooltip Overlay on Card */}
                 <div
-                  className={`absolute inset-x-2.5 bottom-2.5 z-50 grid grid-cols-4 items-center justify-items-center gap-1.5 rounded-xl border border-white/15 bg-[#0f1016] p-2 shadow-[0_10px_35px_rgba(0,0,0,0.9)] transition-all duration-300 ${
-                    isHovered
+                  className={`absolute inset-x-2.5 bottom-2.5 z-50 grid grid-cols-4 items-center justify-items-center gap-1.5 rounded-xl border border-white/15 bg-[#0f1016]/95 backdrop-blur-md p-1.5 sm:p-2 shadow-[0_10px_35px_rgba(0,0,0,0.9)] transition-all duration-300 ${
+                    isVisible
                       ? 'translate-y-0 opacity-100 pointer-events-auto'
                       : 'translate-y-4 opacity-0 pointer-events-none'
                   }`}

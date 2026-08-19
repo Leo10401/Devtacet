@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Social Media Marketing Strategy for Digital Products',
@@ -35,10 +36,19 @@ function ArticleJsonLd() {
     headline: 'Social Media Marketing Strategy for Digital Products',
     description:
       'Build a repeatable SMM playbook covering content calendars, engagement loops, paid amplification, and revenue-tied metrics.',
-    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me' },
-    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me', logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' } },
+    author: {
+      '@type': 'Organization',
+      name: 'Devtacet Engineering & Marketing Team',
+      url: 'https://devtacet.me/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Devtacet',
+      url: 'https://devtacet.me',
+      logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' },
+    },
     datePublished: '2026-08-15',
-    dateModified: '2026-08-15',
+    dateModified: '2026-08-18',
     mainEntityOfPage: 'https://devtacet.me/blog/social-media-marketing',
     keywords: 'social media marketing, SMM, content strategy, brand awareness',
   }
@@ -50,13 +60,13 @@ export default function SocialMediaMarketingPage() {
     <>
       <ArticleJsonLd />
       <article className="mx-auto max-w-3xl px-4 md:px-6">
-        <Link
-          href="/blog"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
-        >
-          <ArrowLeft className="size-4" />
-          Back to Blog
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'Social Media Marketing' },
+          ]}
+          className="mb-8"
+        />
 
         <header className="mb-10">
           <span className="mb-3 inline-block rounded-full bg-pink-500/10 px-3 py-1 text-xs font-medium text-pink-400">
@@ -65,8 +75,8 @@ export default function SocialMediaMarketingPage() {
           <h1 className="font-display text-balance text-3xl font-bold tracking-tight md:text-5xl">
             Social Media Marketing Strategy for Digital Products
           </h1>
-          <p className="mt-4 text-muted-foreground">
-            Published by <span className="text-foreground font-medium">Devtacet</span> · 8 min read
+          <p className="mt-4 text-muted-foreground text-sm">
+            Published by <span className="text-foreground font-medium">Devtacet Team</span> · 8 min read · Updated August 2026
           </p>
         </header>
 
@@ -74,7 +84,7 @@ export default function SocialMediaMarketingPage() {
           <p className="text-lg leading-relaxed text-muted-foreground">
             Social media marketing (SMM) for digital products is not about going viral — it&apos;s about
             building a repeatable system that converts attention into awareness, awareness into trust,
-            and trust into paying customers. This guide covers the strategic framework we use at Devtacet.
+            and trust into paying customers. This guide covers the strategic framework we use at <Link href="/" className="text-primary hover:underline">Devtacet</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -98,7 +108,7 @@ export default function SocialMediaMarketingPage() {
             A sustainable content calendar operates on a 4-pillar rotation: Educational content (how-to
             guides, tips), Social proof (case studies, testimonials), Behind-the-scenes (team culture,
             build process), and Direct promotion (launches, offers). This ratio — roughly 40/25/20/15 —
-            prevents promotional fatigue while building authentic audience connection.
+            prevents promotional fatigue while building authentic audience connection. Discover our full <Link href="/services/social-media-marketing" className="text-primary hover:underline">Social Media Marketing Services</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -139,34 +149,52 @@ export default function SocialMediaMarketingPage() {
             Social media and SEO are not separate channels — they compound. Social signals drive brand
             search volume, which Google interprets as authority. Shared content earns backlinks. And
             platforms like LinkedIn articles are indexed by Google directly. At Devtacet, we integrate
-            SMM with our <Link href="/blog/seo" className="text-primary underline hover:no-underline">Technical SEO &amp; GEO strategy</Link> to
+            SMM with our <Link href="/blog/seo" className="text-primary hover:underline">Technical SEO &amp; GEO strategy</Link> to
             create a unified growth engine.
           </p>
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-pink-500/30 bg-pink-500/5 p-8 text-center">
-          <h3 className="font-display text-2xl font-bold tracking-tight">Need a social media strategy that converts?</h3>
-          <p className="mt-2 text-muted-foreground">
-            We build SMM playbooks tied directly to business growth metrics.
+        <div className="mt-16 rounded-3xl border border-pink-500/30 bg-pink-500/5 p-8 text-center sm:p-10">
+          <h2 className="font-display text-2xl font-bold text-white">Need a social media strategy that converts?</h2>
+          <p className="mt-2 text-sm text-muted-foreground max-w-xl mx-auto">
+            Devtacet builds SMM playbooks and content distribution loops tied directly to revenue.
           </p>
-          <Link
-            href="/#contact"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Let&apos;s talk marketing
-            <ArrowUpRight className="size-4" />
-          </Link>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              <span>Let&apos;s Talk Marketing</span>
+              <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              href="/services/social-media-marketing"
+              className="rounded-full border border-zinc-700 bg-zinc-800/80 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-primary"
+            >
+              SMM Services
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-border pt-8">
-          <h3 className="mb-4 font-display text-lg font-semibold">Related articles</h3>
-          <div className="flex flex-col gap-3">
-            <Link href="/blog/seo" className="text-muted-foreground transition-colors hover:text-primary">
-              → Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook
+          <h3 className="mb-4 font-display text-lg font-semibold text-white">Related Resources</h3>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-sm">
+            <Link href="/services/social-media-marketing" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-pink-400 font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">Social Media Marketing Services →</p>
             </Link>
-            <Link href="/blog/mis" className="text-muted-foreground transition-colors hover:text-primary">
-              → Management Information Systems: How MIS Drives Business Decisions
+            <Link href="/blog/seo" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-amber-400 font-mono">// Blog</span>
+              <p className="mt-1 font-semibold text-white">Technical SEO & GEO Guide →</p>
+            </Link>
+            <Link href="/services/seo" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-primary font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">SEO Services →</p>
+            </Link>
+            <Link href="/blog/mis" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-purple-400 font-mono">// Blog</span>
+              <p className="mt-1 font-semibold text-white">MIS & Data Decisions Guide →</p>
             </Link>
           </div>
         </div>

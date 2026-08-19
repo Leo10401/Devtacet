@@ -45,14 +45,14 @@ const steps = [
 export function ProcessSection() {
   return (
     <section id="process" className="border-y border-border bg-card">
-      <div className="mx-auto w-full max-w-7xl px-8 py-16 md:py-20 xl:px-16">
-        <div className="mb-10 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 py-12 md:py-20 xl:px-16">
+        <div className="mb-8 flex flex-col gap-3 md:mb-12 md:flex-row md:items-end md:justify-between">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-balance text-4xl font-bold tracking-tight md:text-5xl"
+            className="font-display text-balance text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
           >
             How we work
           </motion.h2>
@@ -61,14 +61,14 @@ export function ProcessSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-sm text-pretty leading-relaxed text-muted-foreground"
+            className="max-w-sm text-pretty text-xs sm:text-sm leading-relaxed text-muted-foreground"
           >
             Four phases. Zero guesswork. You see progress every week from
             kickoff to launch and beyond.
           </motion.p>
         </div>
 
-        <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:gap-5">
           {steps.map((step, i) => (
             <motion.div
               key={step.phase}
@@ -97,11 +97,11 @@ export function ProcessSection() {
                   {step.number}
                 </span>
               </div>
-              <div className="flex flex-1 flex-col gap-2.5 p-5">
-                <h3 className="font-display text-lg font-semibold leading-snug tracking-tight">
+              <div className="flex flex-1 flex-col gap-2 p-4 sm:p-5">
+                <h3 className="font-display text-base sm:text-lg font-semibold leading-snug tracking-tight">
                   {step.title}
                 </h3>
-                <p className="text-sm leading-relaxed text-muted-foreground">
+                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground">
                   {step.description}
                 </p>
               </div>

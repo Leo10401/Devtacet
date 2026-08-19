@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'The Complete Guide to Modern Web Development in 2026',
@@ -35,10 +36,19 @@ function ArticleJsonLd() {
     headline: 'The Complete Guide to Modern Web Development in 2026',
     description:
       'Learn how to build fast, scalable web applications using Next.js, React 19, TypeScript, and modern full-stack architecture.',
-    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me' },
-    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me', logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' } },
+    author: {
+      '@type': 'Organization',
+      name: 'Devtacet Engineering Team',
+      url: 'https://devtacet.me/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Devtacet',
+      url: 'https://devtacet.me',
+      logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' },
+    },
     datePublished: '2026-08-15',
-    dateModified: '2026-08-15',
+    dateModified: '2026-08-18',
     mainEntityOfPage: 'https://devtacet.me/blog/web-development',
     keywords: 'web development, Next.js, React, TypeScript, full-stack',
   }
@@ -50,23 +60,23 @@ export default function WebDevelopmentPage() {
     <>
       <ArticleJsonLd />
       <article className="mx-auto max-w-3xl px-4 md:px-6">
-        <Link
-          href="/blog"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
-        >
-          <ArrowLeft className="size-4" />
-          Back to Blog
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'Modern Web Development' },
+          ]}
+          className="mb-8"
+        />
 
         <header className="mb-10">
-          <span className="mb-3 inline-block rounded-full bg-violet-500/10 px-3 py-1 text-xs font-medium text-violet-400">
+          <span className="mb-3 inline-block rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400">
             Web Development
           </span>
           <h1 className="font-display text-balance text-3xl font-bold tracking-tight md:text-5xl">
             The Complete Guide to Modern Web Development in 2026
           </h1>
-          <p className="mt-4 text-muted-foreground">
-            Published by <span className="text-foreground font-medium">Devtacet</span> · 10 min read
+          <p className="mt-4 text-muted-foreground text-sm">
+            Published by <span className="text-foreground font-medium">Devtacet Engineering Team</span> · 10 min read · Updated August 2026
           </p>
         </header>
 
@@ -74,7 +84,7 @@ export default function WebDevelopmentPage() {
           <p className="text-lg leading-relaxed text-muted-foreground">
             Web development has fundamentally transformed. The gap between &ldquo;a website&rdquo; and &ldquo;a web application&rdquo;
             has narrowed to the point where every business needs a fast, interactive, and search-engine-optimized
-            digital presence. This guide covers the full modern web development stack as we build it at Devtacet.
+            digital presence. This guide covers the full modern web development stack as we build it at <Link href="/" className="text-primary hover:underline">Devtacet</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -82,9 +92,9 @@ export default function WebDevelopmentPage() {
           </h2>
           <p className="leading-relaxed text-muted-foreground">
             Google&apos;s Core Web Vitals now directly impact search rankings. Users abandon pages that take longer
-            than 3 seconds to load. Meanwhile, AI search engines like ChatGPT and Perplexity are scraping
+            than 3 seconds to load. Meanwhile, AI search engines like ChatGPT, Claude, and Perplexity are scraping
             structured web content to generate answers. The bar for &ldquo;good enough&rdquo; has risen dramatically —
-            you need sub-second performance, semantic HTML, and machine-readable metadata out of the box.
+            you need sub-second performance, semantic HTML, and machine-readable metadata out of the box. Explore our dedicated <Link href="/services/web-development" className="text-primary hover:underline">Website Development Services</Link> to see our production architecture.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -120,7 +130,7 @@ export default function WebDevelopmentPage() {
             Modern backends are API-first. We use Node.js with Express or Next.js API Routes for server
             logic, MongoDB with Mongoose for flexible document databases, and PostgreSQL for relational
             data requirements. REST and GraphQL APIs serve both web and mobile clients from a single
-            backend, reducing duplication and maintenance costs.
+            backend, reducing duplication and maintenance costs. For complex internal portals, check out our <Link href="/services/custom-software" className="text-primary hover:underline">Custom Software & MIS Development</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -135,24 +145,13 @@ export default function WebDevelopmentPage() {
           </ul>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
-            SEO for Web Applications
+            SEO & GEO for Web Applications
           </h2>
           <p className="leading-relaxed text-muted-foreground">
             Server-rendered Next.js pages are inherently SEO-friendly. But ranking requires more than
             renderable HTML. We implement Schema.org JSON-LD structured data, dynamic sitemaps, optimized
             meta tags, canonical URLs, and <code className="rounded bg-secondary px-1.5 py-0.5 text-sm text-foreground">llms.txt</code> files
-            for AI search engine indexing. Every page ships with OpenGraph and Twitter Card metadata for
-            social sharing optimization.
-          </p>
-
-          <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
-            Deployment &amp; Infrastructure
-          </h2>
-          <p className="leading-relaxed text-muted-foreground">
-            We deploy to Vercel for zero-config edge infrastructure with automatic preview deployments
-            on every pull request. For enterprise clients requiring custom infrastructure, we provision
-            AWS with CloudFront CDN, Lambda@Edge, and containerized services. Every deployment is
-            zero-downtime with automatic rollback capability.
+            for AI search engine indexing. Learn more in our <Link href="/services/seo" className="text-primary hover:underline">Technical SEO & GEO Services</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -160,36 +159,52 @@ export default function WebDevelopmentPage() {
           </h2>
           <p className="leading-relaxed text-muted-foreground">
             Our 7-stage process ensures nothing is missed: Discovery → Architecture → Design → Engineering →
-            QA → Launch → Growth. Clients work directly with the engineers writing the code — no account
-            managers, no telephone games. We ship fast, iterate faster, and optimize for long-term SEO
-            compounding after launch.
+            QA → Launch → Growth. Clients work directly with the senior engineers writing the code. See our real case study on <Link href="/case-studies/edge-deploy-ui" className="text-primary hover:underline">Edge Deploy UI Platform</Link> to examine our full-stack workflow.
           </p>
         </div>
 
-        {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-primary/30 bg-primary/5 p-8 text-center">
-          <h3 className="font-display text-2xl font-bold tracking-tight">Ready to build your web product?</h3>
-          <p className="mt-2 text-muted-foreground">
-            Let&apos;s talk about your project — from architecture to launch.
+        {/* CTA Banner */}
+        <div className="mt-16 rounded-3xl border border-primary/30 bg-gradient-to-r from-primary/10 via-cyan-500/5 to-transparent p-8 text-center sm:p-10">
+          <h2 className="font-display text-2xl font-bold text-white">Ready to build your web application?</h2>
+          <p className="mt-2 text-sm text-muted-foreground max-w-xl mx-auto">
+            Devtacet builds high-performance Next.js and React web applications for startups and businesses.
           </p>
-          <Link
-            href="/#contact"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Start a project
-            <ArrowUpRight className="size-4" />
-          </Link>
-        </div>
-
-        {/* Related posts */}
-        <div className="mt-12 border-t border-border pt-8">
-          <h3 className="mb-4 font-display text-lg font-semibold">Related articles</h3>
-          <div className="flex flex-col gap-3">
-            <Link href="/blog/seo" className="text-muted-foreground transition-colors hover:text-primary">
-              → Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              <span>Start Web Project</span>
+              <ArrowRight className="size-4" />
             </Link>
-            <Link href="/blog/android-development" className="text-muted-foreground transition-colors hover:text-primary">
-              → Android App Development: From Idea to Play Store Launch
+            <Link
+              href="/services/web-development"
+              className="rounded-full border border-zinc-700 bg-zinc-800/80 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-primary"
+            >
+              Explore Web Services
+            </Link>
+          </div>
+        </div>
+
+        {/* Related posts & Case Studies */}
+        <div className="mt-12 border-t border-border pt-8">
+          <h3 className="mb-4 font-display text-lg font-semibold text-white">Related Resources</h3>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-sm">
+            <Link href="/services/web-development" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-primary font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">Website Development Services →</p>
+            </Link>
+            <Link href="/case-studies/edge-deploy-ui" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-cyan-400 font-mono">// Case Study</span>
+              <p className="mt-1 font-semibold text-white">Edge Deploy UI Platform →</p>
+            </Link>
+            <Link href="/blog/seo" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-amber-400 font-mono">// Blog</span>
+              <p className="mt-1 font-semibold text-white">Technical SEO & GEO Guide →</p>
+            </Link>
+            <Link href="/web-development-company-lucknow" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-emerald-400 font-mono">// Local</span>
+              <p className="mt-1 font-semibold text-white">Web Development in Lucknow →</p>
             </Link>
           </div>
         </div>

@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, Clock, TrendingUp, Share2, BarChart3, Cpu, Smartphone, Code2 } from 'lucide-react'
 import Link from 'next/link'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 const posts = [
   {
@@ -134,6 +135,7 @@ const item = {
 export default function BlogIndexPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-16 md:pt-24 pb-20">
+      <Breadcrumbs items={[{ label: 'Blog & Articles' }]} className="mb-8" />
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

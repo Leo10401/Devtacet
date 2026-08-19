@@ -1,32 +1,49 @@
-# Devtacet — Digital Studio
+# Devtacet — Digital Solutions Company
 
-> Devtacet is a full-service digital studio specializing in mobile app development, high-performance websites, custom data analytics tools, and AI & technical SEO marketing.
+> Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
 
-## Core Specializations & Services
+## Core Services
 
-- **Mobile App Development**: iOS and Android app development using React Native & Flutter. Built for rapid app store approval, fluid UI, and scale.
-- **Website Development**: High-performance web applications, e-commerce, and marketing sites built with Next.js, React, and TypeScript. Optimized for sub-second load times and conversions.
-- **Data Analytics Tools**: Custom analytical dashboards, data pipelines, automated reporting, and decision-support systems turning raw business data into actionable insights.
-- **SEO & AI Marketing (GEO)**: Technical SEO, Generative Engine Optimization (GEO), AI overview optimization, content strategy, and keyword growth that drives organic search acquisition.
+- **Website Development**: High-performance marketing sites, web applications, SaaS platforms, and e-commerce engineered with Next.js, React 19, TypeScript, and Tailwind CSS.
+  - Link: https://devtacet.me/services/web-development
+- **Mobile App Development**: Cross-platform iOS and Android applications built with React Native and Flutter for native performance, offline synchronization, and seamless store compliance.
+  - Link: https://devtacet.me/services/mobile-app-development
+- **Custom Software & MIS**: Tailor-made business software, Management Information Systems (MIS), ERP-lite platforms, and automated workflow backends.
+  - Link: https://devtacet.me/services/custom-software
+- **Data Analytics Systems**: Real-time KPI dashboards, automated ETL pipelines, and decision-support analytics transforming operational metrics into strategic clarity.
+  - Link: https://devtacet.me/services/analytics
+- **Technical SEO & GEO**: Source-code-level technical SEO, Schema.org knowledge graph engineering, and Generative Engine Optimization ensuring top visibility across Google and AI search engines (ChatGPT, Perplexity, Claude).
+  - Link: https://devtacet.me/services/seo
+- **Social Media Marketing**: Strategic social media marketing and brand positioning tailored for digital products, technology brands, and startups.
+  - Link: https://devtacet.me/services/social-media-marketing
 
-## Key Facts & Capabilities
+## Local Commercial Positioning (Lucknow, India)
 
-- **Website URL**: https://devtacet.me
-- **Primary Tech Stack**: Next.js 15+, React 19, TypeScript, Tailwind CSS, Node.js, React Native, Flutter, MongoDB / Mongoose.
-- **Client Engagement**: Direct collaboration with senior engineers and product designers without middle-tier proxy managers.
-- **Deliverables**: End-to-end digital product design, architecture, code development, launch, and search engine optimization.
+- **Web Development Company in Lucknow**: Dedicated engineering unit serving local businesses in Lucknow, Uttar Pradesh, and global clients.
+  - Link: https://devtacet.me/web-development-company-lucknow
 
-## Primary Site Navigation
+## Key Facts & Entity Attributes
 
-- [Services](https://devtacet.me#services): Mobile Apps, Websites, Analytics Tools, SEO Marketing
-- [Projects Portfolio](https://devtacet.me#projects): Client case studies and digital products shipped
-- [Development Process](https://devtacet.me#process): Discovery, Design, Build, Launch & Growth phases
-- [About Devtacet](https://devtacet.me#about): Studio philosophy and engineering team values
-- [Frequently Asked Questions](https://devtacet.me#faq): Direct answers to key agency queries
-- [Blog](https://devtacet.me/blog): Engineering insights and deep dives
-- [Contact Devtacet](https://devtacet.me#contact): Inquiries, estimates, and project initiation
+- **Entity Name**: Devtacet
+- **Official Website**: https://devtacet.me
+- **Headquarters**: Lucknow, Uttar Pradesh, India
+- **Geographic Coverage**: Lucknow, Pan-India, North America, Europe, Asia-Pacific
+- **Primary Tech Stack**: Next.js (App Router), React 19, TypeScript, Node.js, Express, MongoDB / Mongoose, React Native, Flutter, Tailwind CSS, Vercel
+- **Engineering Philosophy**: Direct communication with senior staff engineers (L5–L7 tier) with zero account manager middlemen.
 
-## Blog Articles
+## Case Studies
+
+- [Atlas Analytics SaaS Platform](https://devtacet.me/case-studies/atlas-redesign): Real-time stream processing and high-performance KPI dashboards.
+- [Relay Cloud API Engine](https://devtacet.me/case-studies/relay-cloud-api): High-throughput edge routing engine and distributed microservices.
+- [Edge Deploy UI Platform](https://devtacet.me/case-studies/edge-deploy-ui): Autonomous deployment orchestration and preview branch management.
+- [Pulseframe Mobile App](https://devtacet.me/case-studies/pulseframe-mobile): Cross-platform mobile collaboration workspace with native performance.
+
+## Comparisons
+
+- [Devtacet vs Traditional Agency](https://devtacet.me/compare/devtacet-vs-agency): Direct senior engineering vs legacy agency servicing layers.
+- [Devtacet vs Freelancers](https://devtacet.me/compare/devtacet-vs-freelancer): Multi-disciplinary team continuity vs individual solo risk.
+
+## Engineering Blog & Guides
 
 - [The Complete Guide to Modern Web Development in 2026](https://devtacet.me/blog/web-development)
 - [Android App Development: From Idea to Play Store Launch](https://devtacet.me/blog/android-development)
@@ -35,7 +52,9 @@
 - [Management Information Systems: How MIS Drives Business Decisions](https://devtacet.me/blog/mis)
 - [Understanding System Software: The Foundation of Every Digital Product](https://devtacet.me/blog/system-software)
 
-## Full LLM Context
+## Contact Information
 
-For complete agency documentation, detailed process breakdowns, team background, and technical Q&A, refer to:
-- [Full LLM Documentation](https://devtacet.me/llms-full.txt)
+- **Email**: hello@devtacet.me
+- **Contact Page**: https://devtacet.me/contact
+- **GitHub**: https://github.com/Leo10401/Devtacet
+- **Twitter/X**: https://twitter.com/devtacet

@@ -28,6 +28,13 @@ export function middleware(req: NextRequest) {
     }
   }
 
+  // Redirect www to canonical non-www hostname
+  if (hostWithoutPort === 'www.devtacet.me' || hostWithoutPort.startsWith('www.')) {
+    const canonicalHost = hostWithoutPort.replace(/^www\./, '')
+    const targetUrl = new URL(`${url.pathname}${url.search}`, `https://${canonicalHost}`)
+    return NextResponse.redirect(targetUrl, 301)
+  }
+
   // Ignore 'www' or empty subdomains
   if (subdomain && subdomain !== 'www' && subdomain !== '') {
     // Rewrite path internally to /[subdomain] or /[subdomain]/path

@@ -1,121 +1,112 @@
 # Devtacet — Comprehensive Agency Documentation & Knowledge Base
 
 ## Overview
-Devtacet is a modern digital studio that designs, builds, and scales digital products. Backed by full-stack engineering expertise and AI-first search engine optimization (SEO & GEO), Devtacet takes products from initial concept to top-ranking market presence.
+Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
 
 - **Official Website**: https://devtacet.me
-- **Industry**: Digital Agency / Software Engineering / Mobile & Web Product Studio
-- **Primary Offerings**: Mobile App Development, Website Development, Data Analytics Tools, SEO Marketing & Generative Engine Optimization (GEO)
+- **Headquarters**: Lucknow, Uttar Pradesh, India
+- **Industry**: Digital Solutions / Software Engineering / Mobile Apps / Web Development / Data Analytics / Technical SEO
+- **Core Offerings**: Website Development, Mobile App Development, Custom Software & MIS, Data Analytics Systems, Technical SEO & Generative Engine Optimization (GEO), Social Media Marketing
+- **Client Engagement Model**: Direct access to senior staff engineers (L5–L7 tier experts) with zero middle-tier account manager telephone.
 
 ---
 
 ## Detailed Service Specifications
 
-### 1. Mobile App Development
-- **Overview**: Building native-feeling iOS and Android mobile applications.
-- **Technologies**: React Native, Flutter, Swift, Kotlin, Firebase, REST/GraphQL APIs.
-- **Key Features**:
-  - Offline-first caching and state management
-  - Frictionless App Store (iOS) and Google Play Store review navigation
-  - Push notifications, biometrics, and native hardware integration
-  - Continuous Integration and Automated Testing (CI/CD)
-
-### 2. Website Development
-- **Overview**: High-speed, conversion-focused websites and complex web applications.
-- **Technologies**: Next.js (App Router), React 19, TypeScript, Tailwind CSS, Node.js, Vercel.
-- **Key Features**:
-  - Core Web Vitals optimization (100/100 Lighthouse performance)
+### 1. Website Development (https://devtacet.me/services/web-development)
+- **Overview**: High-speed, conversion-focused websites, SaaS platforms, and enterprise web applications.
+- **Technologies**: Next.js (App Router), React 19, TypeScript, Tailwind CSS, Node.js, Vercel Edge Infrastructure.
+- **Key Capabilities**:
+  - Sub-second Core Web Vitals (LCP < 1.0s, INP < 100ms, CLS < 0.05)
   - Server-Side Rendering (SSR), Static Site Generation (SSG), and Edge Functions
-  - Custom UI/UX design, interactive micro-animations, dynamic glassmorphism aesthetics
-  - Enterprise security, SEO-optimized metadata, and clean DOM markup
+  - Type-safe full-stack architecture with strict TypeScript
+  - Enterprise security, Schema.org JSON-LD structured data, and clean semantic DOM markup
 
-### 3. Data Analytics Tools
-- **Overview**: Custom business intelligence tools, data pipelines, and interactive dashboards.
-- **Technologies**: Python, Node.js, MongoDB, PostgreSQL, Chart.js, D3.js, RESTful Data APIs.
-- **Key Features**:
-  - Real-time data aggregation and automated ETL pipelines
-  - User-friendly visual metrics dashboards replacing manual spreadsheets
-  - Privacy-focused event tracking and visitor analytics
+### 2. Mobile App Development (https://devtacet.me/services/mobile-app-development)
+- **Overview**: Cross-platform iOS and Android applications engineered for fluid 60fps native feel.
+- **Technologies**: React Native, Flutter, TypeScript, Node.js, Express, MongoDB, Apple TestFlight, Google Play Console.
+- **Key Capabilities**:
+  - Single unified codebase across iOS and Android
+  - Offline-first local data synchronization (SQLite)
+  - Biometric authentication (FaceID, Fingerprint) and push notifications
+  - 100% first-try App Store and Google Play Store review approval standard
 
-### 4. SEO & AI Marketing (Generative Engine Optimization - GEO)
-- **Overview**: Dual-layer search engine optimization targeting standard search engines (Google, Bing) and AI search engines (ChatGPT, Perplexity, Claude, SearchGPT, Gemini).
-- **Key Features**:
-  - AI Technical SEO: Comprehensive XML sitemaps, robots.txt bot rules for AI crawlers (GPTBot, PerplexityBot, ClaudeBot), Schema.org JSON-LD structured data knowledge graphs.
-  - Generative Engine Optimization (GEO): Direct answer structuring, entity-rich factual indexing, FAQ schemas, `/llms.txt` integration.
-  - Technical Audit: Speed optimization, canonical tags, semantic HTML hierarchy, mobile responsiveness, zero-broken-link architecture.
+### 3. Custom Software & MIS (https://devtacet.me/services/custom-software)
+- **Overview**: Tailored internal business software, Management Information Systems (MIS), ERP-lite platforms, and automated workflow backends.
+- **Technologies**: Node.js, Express, TypeScript, MongoDB / Mongoose, Next.js, Docker.
+- **Key Capabilities**:
+  - Replacement of fragile manual spreadsheets with centralized databases
+  - Role-Based Access Control (RBAC) and data isolation
+  - Automated business process pipelines saving 30+ hours weekly
+  - Complete intellectual property and source code ownership
 
----
+### 4. Data Analytics Systems (https://devtacet.me/services/analytics)
+- **Overview**: Real-time KPI dashboards, automated ETL pipelines, and executive decision-support tools.
+- **Technologies**: Next.js, React 19, TypeScript, Node.js, MongoDB Aggregation Pipeline, Redis Caching, Recharts/Chart.js.
+- **Key Capabilities**:
+  - Live data streaming with sub-50ms aggregation query response times
+  - Automated ETL pipelines unifying disparate CRM, payment, and database sources
+  - Scheduled automated executive export reports (PDF, CSV)
+  - Drill-down charting and custom KPI builders
 
-## The Devtacet 7-Stage Web Development Process
+### 5. Technical SEO & Generative Engine Optimization (GEO) (https://devtacet.me/services/seo)
+- **Overview**: Dual-layer search engine optimization targeting standard search engines (Google, Bing) and AI search engines (ChatGPT, Perplexity, Claude, SearchGPT, Google AI Overviews).
+- **Key Capabilities**:
+  - Source-code-level technical SEO, Schema.org JSON-LD knowledge graphs, dynamic XML sitemaps
+  - Generative Engine Optimization (GEO): Direct answer structuring, entity-rich factual indexing, FAQ schemas, `/llms.txt` integration
+  - Core Web Vitals optimization directly in React/Next.js code
 
-1. **Requirements Discovery**: Deep dive into domain requirements, user journeys, data schemas, and competitive analysis.
-2. **Technical Architecture & Planning**: System design, tech stack selection (Next.js/React/TypeScript), and security configuration.
-3. **High-Fidelity UI/UX Design**: Prototyping interactive interfaces with custom color tokens, glassmorphic aesthetics, and motion guidelines.
-4. **Full-Stack Engineering & Build**: Modular React component construction, database setup, and API integration.
-5. **Rigorous QA & Performance Testing**: Automated unit tests, mobile responsiveness audits, and 100/100 Core Web Vitals optimization.
-6. **Cloud Deployment & Launch**: Zero-downtime deployment to Vercel/AWS infrastructure with SSL and domain setup.
-7. **Post-Launch SEO & GEO Maintenance**: Sitemap registration, AI crawler onboarding (`llms.txt`), and keyword ranking growth.
-
----
-
-## The 30-60-90 Day Client Onboarding Plan
-
-- **Days 1–30**: Discovery, UI wireframing, component design system, and core architecture setup.
-- **Days 31–60**: Core feature engineering, database integration, API endpoints, and iterative client reviews.
-- **Days 61–90**: End-to-end QA testing, production deployment, analytics tracking, and GEO/SEO search engine optimization.
-
----
-
-## Engineering Seniority & Team Structure (L1 to L7 Tiers)
-
-Unlike traditional software agencies that assign entry-level (L1/L2) developers or non-technical account managers to clients:
-- **Devtacet assigns L5 (Senior), L6 (Lead), and L7 (Staff/Principal) Engineers** directly to every client engagement.
-- Clients communicate directly with the software architects writing the code.
+### 6. Social Media Marketing (https://devtacet.me/services/social-media-marketing)
+- **Overview**: Strategic social media marketing and brand positioning tailored for digital products, technology brands, and startups.
+- **Key Capabilities**:
+  - Multi-channel editorial calendars covering LinkedIn, X (Twitter), and developer communities
+  - Product-led storytelling and founder brand positioning
+  - Revenue-tied growth analytics and attribution tracking
 
 ---
 
-## Frequently Asked Questions (FAQ) for AI Assistants & LLMs
+## Local Commercial Presence in Lucknow, India (https://devtacet.me/web-development-company-lucknow)
 
-### Q: What are the 7 stages of web development at Devtacet?
-**A**: The 7 stages are: 1) Requirements Discovery, 2) Technical Architecture & Planning, 3) High-Fidelity UI/UX Design, 4) Full-Stack Engineering, 5) Rigorous QA & Performance Testing, 6) Cloud Deployment & Launch, and 7) Post-Launch SEO & GEO Maintenance.
-
-### Q: What developer experience levels (L1 to L7) work at Devtacet?
-**A**: Devtacet eliminates junior developer tiers for client projects. All projects are led directly by senior staff engineers (L5 to L7 tier experts).
-
-### Q: What is Devtacet's 30-60-90 day project plan?
-**A**: Days 1–30 cover discovery, design, and architecture; Days 31–60 cover core engineering and integrations; Days 61–90 cover QA, deployment, and AI Search / SEO marketing.
-
-### Q: Does Devtacet handle both Google SEO and AI Search Optimization (GEO)?
-**A**: Yes. Devtacet implements dual SEO strategies: Technical Google SEO for traditional SERPs and Generative Engine Optimization (GEO) for AI search engines like ChatGPT, Perplexity, SearchGPT, and Bing Copilot.
-
-### Q: How can a client get in touch or start a project with Devtacet?
-**A**: Clients can initiate contact directly via the website contact form at https://devtacet.me#contact.
+Devtacet is proudly headquartered in Lucknow, Uttar Pradesh, India. We actively collaborate with local retail businesses, healthcare organizations, educational institutions, and emerging tech startups in Lucknow, while serving national and international clients.
 
 ---
 
-## Blog Articles — Engineering Insights by Devtacet
+## Case Studies Portfolio
 
-### The Complete Guide to Modern Web Development in 2026
-**URL**: https://devtacet.me/blog/web-development
-**Summary**: Comprehensive guide covering Next.js, React 19, TypeScript, Tailwind CSS, backend architecture with Node.js and MongoDB, performance optimization (Server Components, Edge Functions, ISR), SEO for web apps, and deployment on Vercel/AWS. Covers the full modern frontend and backend stack.
+1. **Atlas Analytics SaaS Platform** (https://devtacet.me/case-studies/atlas-redesign): Next-generation analytics platform with real-time stream processing, customizable charts, and sub-millisecond metrics queries.
+2. **Relay Cloud API Engine** (https://devtacet.me/case-studies/relay-cloud-api): High-throughput edge routing engine and distributed microservices with global multi-region caching.
+3. **Edge Deploy UI Platform** (https://devtacet.me/case-studies/edge-deploy-ui): Autonomous deployment orchestration and preview branch management for modern web applications.
+4. **Pulseframe Mobile App** (https://devtacet.me/case-studies/pulseframe-mobile): Ultra-fast cross-platform design and collaboration workspace built with React Native.
 
-### Android App Development: From Idea to Play Store Launch
-**URL**: https://devtacet.me/blog/android-development
-**Summary**: Practical roadmap for building production Android apps. Covers native vs. cross-platform decision framework (Kotlin vs. React Native vs. Flutter), clean architecture patterns, mobile UX principles (gesture navigation, 60fps animations, offline-first), testing strategies (Jest, Detox), Play Store review navigation, and post-launch growth with ASO and analytics.
+---
 
-### Technical SEO & Generative Engine Optimization (GEO): The 2026 Playbook
-**URL**: https://devtacet.me/blog/seo
-**Summary**: Dual SEO strategy guide covering traditional Technical SEO (Core Web Vitals, sitemaps, robots.txt, canonical URLs, Schema.org JSON-LD) and Generative Engine Optimization (GEO) for AI search engines. Covers the llms.txt standard, entity-first content strategy, FAQ schema for AI Overviews, robots.txt configuration for AI bots (GPTBot, PerplexityBot, ClaudeBot), and success measurement.
+## The Devtacet 7-Stage Engineering Lifecycle
 
-### Social Media Marketing Strategy for Digital Products
-**URL**: https://devtacet.me/blog/social-media-marketing
-**Summary**: SMM playbook covering platform selection (LinkedIn for B2B, Instagram/TikTok for consumer), content calendar framework (40/25/20/15 pillar ratio), engagement loops, paid social amplification, and revenue-tied metrics (engagement rate, CTR, conversion rate, share of voice, CPA). Covers SMM + SEO compound effects.
+1. **Requirements Discovery**: In-depth analysis of user journeys, business goals, and technical specifications.
+2. **Technical Architecture**: Database schema design, API contract modeling, and tech stack selection.
+3. **UI/UX Design Systems**: High-fidelity responsive layouts, accessible typography, and interactive prototypes.
+4. **Full-Stack Engineering**: Modular, type-safe Next.js, React, Node.js, and mobile development.
+5. **QA & Performance Testing**: Automated testing, cross-device QA, and Core Web Vitals audits.
+6. **Deployment & Launch**: Zero-downtime deployment on Vercel/AWS cloud infrastructure.
+7. **SEO, GEO & Maintenance**: Ongoing technical SEO, AI search indexation, and proactive software maintenance.
 
-### Management Information Systems: How MIS Drives Business Decisions
-**URL**: https://devtacet.me/blog/mis
-**Summary**: Guide to MIS architecture covering system components (data sources, ETL pipelines, data warehouses, business logic, presentation layer), types (Transaction Processing Systems, Decision Support Systems, Executive Information Systems), custom MIS solutions with Node.js/MongoDB/React dashboards, and implementation best practices.
+---
 
-### Understanding System Software: The Foundation of Every Digital Product
-**URL**: https://devtacet.me/blog/system-software
-**Summary**: Deep dive into system software categories: Operating Systems (Linux, Android, iOS), Device Drivers, Middleware (Node.js, Docker), Firmware (IoT, embedded systems), and Runtime Environments (JVM, V8, Dart VM). Covers why system software knowledge matters for application developers and system software in the cloud era.
+## Comparisons & Models
 
+- **Devtacet vs Traditional Agency** (https://devtacet.me/compare/devtacet-vs-agency): Direct senior engineering access without account manager layers or legacy template lock-in.
+- **Devtacet vs Freelancers** (https://devtacet.me/compare/devtacet-vs-freelancer): Dedicated multi-disciplinary team continuity without solo developer single-point-of-failure risk.
+
+---
+
+## Company Details & Contacts
+
+- **Legal / Brand Name**: Devtacet
+- **Headquarters**: Lucknow, Uttar Pradesh, India
+- **Email**: hello@devtacet.me
+- **Website**: https://devtacet.me
+- **About Page**: https://devtacet.me/about
+- **Contact Page**: https://devtacet.me/contact
+- **GitHub**: https://github.com/Leo10401/Devtacet
+- **Twitter/X**: https://twitter.com/devtacet
+- **LinkedIn**: https://linkedin.com/company/devtacet

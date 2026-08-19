@@ -41,18 +41,18 @@ const weDont = [
 
 export function AboutSection() {
   return (
-    <section id="about" className="mx-auto w-full max-w-7xl px-8 py-10 md:py-14 xl:px-16">
+    <section id="about" className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 py-12 md:py-16 xl:px-16">
       <motion.p
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.4 }}
-        className="mb-4 text-xs uppercase tracking-widest text-muted-foreground"
+        className="mb-3 text-xs uppercase tracking-widest text-muted-foreground"
       >
         About Devtacet
       </motion.p>
 
-      <h2 className="mb-8 max-w-4xl font-display text-balance text-3xl font-bold leading-tight tracking-tight md:mb-12 md:text-5xl md:leading-tight">
+      <h2 className="mb-6 max-w-4xl font-display text-balance text-2xl sm:text-3xl md:text-5xl font-bold leading-snug tracking-tight md:mb-12">
         {manifesto.map((word, i) => (
           <motion.span
             key={i}
@@ -72,18 +72,18 @@ export function AboutSection() {
         ))}
       </h2>
 
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid grid-cols-1 gap-4 sm:gap-6 md:grid-cols-2">
         <motion.div
           initial={{ opacity: 0, y: 32 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-2xl border border-primary/30 bg-primary/5 p-8"
+          className="rounded-2xl border border-primary/30 bg-primary/5 p-5 sm:p-8"
         >
-          <h3 className="mb-6 font-display text-lg font-semibold tracking-tight text-primary">
+          <h3 className="mb-4 sm:mb-6 font-display text-base sm:text-lg font-semibold tracking-tight text-primary">
             What working with us looks like
           </h3>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-3 sm:gap-4">
             {weDo.map((item, i) => (
               <motion.li
                 key={i}
@@ -91,12 +91,12 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: 0.1 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-2.5 sm:gap-3"
               >
                 <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-primary text-primary-foreground">
                   <Check className="size-3" aria-hidden="true" />
                 </span>
-                <p className="text-sm leading-relaxed text-foreground">{item}</p>
+                <p className="text-xs sm:text-sm leading-relaxed text-foreground">{item}</p>
               </motion.li>
             ))}
           </ul>
@@ -107,12 +107,12 @@ export function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="rounded-2xl border border-border bg-card p-8"
+          className="rounded-2xl border border-border bg-card p-5 sm:p-8"
         >
-          <h3 className="mb-6 font-display text-lg font-semibold tracking-tight text-muted-foreground">
+          <h3 className="mb-4 sm:mb-6 font-display text-base sm:text-lg font-semibold tracking-tight text-muted-foreground">
             What it never looks like
           </h3>
-          <ul className="flex flex-col gap-4">
+          <ul className="flex flex-col gap-3 sm:gap-4">
             {weDont.map((item, i) => (
               <motion.li
                 key={i}
@@ -120,12 +120,12 @@ export function AboutSection() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-40px' }}
                 transition={{ duration: 0.5, delay: 0.2 + i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-                className="flex items-start gap-3"
+                className="flex items-start gap-2.5 sm:gap-3"
               >
                 <span className="mt-0.5 flex size-5 shrink-0 items-center justify-center rounded-full bg-secondary text-muted-foreground">
                   <X className="size-3" aria-hidden="true" />
                 </span>
-                <p className="text-sm leading-relaxed text-muted-foreground line-through decoration-muted-foreground/40">
+                <p className="text-xs sm:text-sm leading-relaxed text-muted-foreground line-through decoration-muted-foreground/40">
                   {item}
                 </p>
               </motion.li>

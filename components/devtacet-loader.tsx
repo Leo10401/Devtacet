@@ -106,7 +106,7 @@ export function DevtacetLoader() {
       aria-live="polite"
       className="loader-root fixed inset-0 z-[9999] flex items-center justify-center bg-[radial-gradient(ellipse_60%_50%_at_50%_42%,#121826,#0A0D12_72%)] transition-[opacity,transform,visibility] duration-[400ms] ease-[cubic-bezier(.76,0,.24,1)] [&.is-done]:pointer-events-none [&.is-done]:invisible [&.is-done]:scale-[1.03] [&.is-done]:opacity-0"
     >
-      <span className="sr-only">DevTacet is loading</span>
+      <span className="sr-only">Devtacet is loading</span>
       <div className="stage relative flex flex-col items-center gap-[clamp(20px,4vw,30px)]">
         <div
           ref={markWrapRef}

@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { motion } from 'framer-motion'
 import Smooth3DSlideshow from './CoverflowGallery'
 
@@ -84,7 +85,7 @@ export function ProjectsSection() {
   return (
     <section
       id="projects"
-      className="relative flex h-svh flex-col overflow-hidden px-8 py-10 md:py-12 xl:px-16"
+      className="relative flex min-h-[540px] lg:min-h-svh flex-col justify-center overflow-hidden px-4 sm:px-6 md:px-8 py-12 md:py-16 xl:px-16"
     >
       {/* faint grid backdrop */}
       <div
@@ -106,7 +107,7 @@ export function ProjectsSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-3 font-mono text-xs text-primary"
+              className="mb-2 sm:mb-3 font-mono text-xs text-primary"
             >
               $ ls ./projects
             </motion.p>
@@ -119,27 +120,35 @@ export function ProjectsSection() {
                 delay: 0.05,
                 ease: [0.22, 1, 0.36, 1],
               }}
-              className="font-display text-balance text-4xl font-bold tracking-tight md:text-5xl"
+              className="font-display text-balance text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
             >
               Our <span className="text-primary">work</span>
             </motion.h2>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 24 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{
-              duration: 0.6,
-              delay: 0.15,
-              ease: [0.22, 1, 0.36, 1],
-            }}
-            className="max-w-sm text-pretty leading-relaxed text-muted-foreground"
-          >
-            We architect and engineer production software — from
-            high-throughput backend services to immersive web and mobile
-            experiences.
-          </motion.p>
+          <div className="flex flex-col gap-2 sm:items-end">
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{
+                duration: 0.6,
+                delay: 0.15,
+                ease: [0.22, 1, 0.36, 1],
+              }}
+              className="max-w-sm text-pretty text-xs sm:text-sm leading-relaxed text-muted-foreground"
+            >
+              We architect and engineer production software — from
+              high-throughput backend services to immersive web and mobile
+              experiences.
+            </motion.p>
+            <Link
+              href="/case-studies"
+              className="text-xs font-semibold text-primary transition-colors hover:underline"
+            >
+              Explore All Case Studies &rarr;
+            </Link>
+          </div>
         </div>
 
         <motion.div
@@ -147,7 +156,7 @@ export function ProjectsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-60px' }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="relative mx-auto min-h-0 w-full flex-1"
+          className="relative mx-auto min-h-[340px] w-full flex-1"
         >
           <Smooth3DSlideshow
             slides={slides}

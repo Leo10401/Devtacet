@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Android App Development: From Idea to Play Store Launch',
@@ -34,10 +35,19 @@ function ArticleJsonLd() {
     headline: 'Android App Development: From Idea to Play Store Launch',
     description:
       'A practical guide to building production Android apps using Kotlin, React Native, and Flutter.',
-    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me' },
-    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me', logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' } },
+    author: {
+      '@type': 'Organization',
+      name: 'Devtacet Engineering Team',
+      url: 'https://devtacet.me/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Devtacet',
+      url: 'https://devtacet.me',
+      logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' },
+    },
     datePublished: '2026-08-15',
-    dateModified: '2026-08-15',
+    dateModified: '2026-08-18',
     mainEntityOfPage: 'https://devtacet.me/blog/android-development',
     keywords: 'android development, React Native, Flutter, Kotlin, Play Store',
   }
@@ -49,13 +59,13 @@ export default function AndroidDevelopmentPage() {
     <>
       <ArticleJsonLd />
       <article className="mx-auto max-w-3xl px-4 md:px-6">
-        <Link
-          href="/blog"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
-        >
-          <ArrowLeft className="size-4" />
-          Back to Blog
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'Android & Mobile App Development' },
+          ]}
+          className="mb-8"
+        />
 
         <header className="mb-10">
           <span className="mb-3 inline-block rounded-full bg-emerald-500/10 px-3 py-1 text-xs font-medium text-emerald-400">
@@ -64,8 +74,8 @@ export default function AndroidDevelopmentPage() {
           <h1 className="font-display text-balance text-3xl font-bold tracking-tight md:text-5xl">
             Android App Development: From Idea to Play Store Launch
           </h1>
-          <p className="mt-4 text-muted-foreground">
-            Published by <span className="text-foreground font-medium">Devtacet</span> · 9 min read
+          <p className="mt-4 text-muted-foreground text-sm">
+            Published by <span className="text-foreground font-medium">Devtacet Engineering Team</span> · 9 min read · Updated August 2026
           </p>
         </header>
 
@@ -73,7 +83,7 @@ export default function AndroidDevelopmentPage() {
           <p className="text-lg leading-relaxed text-muted-foreground">
             Building an Android app that survives the Play Store review, retains users past day one, and
             scales without crashing requires more than writing Kotlin. This guide covers the full lifecycle
-            — from choosing the right framework to optimizing for store rankings.
+            — from choosing the right framework to optimizing for store rankings, as engineered at <Link href="/" className="text-primary hover:underline">Devtacet</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -83,7 +93,7 @@ export default function AndroidDevelopmentPage() {
             The native-vs-cross-platform debate has shifted. React Native and Flutter now deliver
             near-native performance with significantly faster development cycles. At Devtacet, we
             recommend cross-platform for 80% of projects because it lets you ship iOS and Android
-            simultaneously from a single codebase, halving development time and maintenance burden.
+            simultaneously from a single codebase, halving development time and maintenance burden. Learn more about our <Link href="/services/mobile-app-development" className="text-primary hover:underline">Mobile App Development Services</Link>.
           </p>
 
           <h3 className="mt-8 mb-3 font-display text-xl font-semibold">When to go Native (Kotlin/Swift)</h3>
@@ -107,7 +117,7 @@ export default function AndroidDevelopmentPage() {
             We structure every mobile app around clean architecture principles: a presentation layer
             (UI components and state management), a domain layer (business logic and use cases), and
             a data layer (API clients, local storage, and caching). This separation ensures testability,
-            modularity, and the ability to swap implementations without rewriting the entire app.
+            modularity, and the ability to swap implementations without rewriting the entire app. For back-office synchronization, see our <Link href="/services/custom-software" className="text-primary hover:underline">Custom Software Systems</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -146,34 +156,51 @@ export default function AndroidDevelopmentPage() {
           <p className="leading-relaxed text-muted-foreground">
             Shipping to the store is not the finish line — it&apos;s the starting gun. We integrate analytics
             (Firebase, Mixpanel), set up crash reporting (Sentry), implement push notification campaigns,
-            and run A/B tests on onboarding flows. App Store Optimization (ASO) ensures your listing
-            ranks for target keywords, and we monitor retention curves to guide feature prioritization.
+            and run A/B tests on onboarding flows. See how we engineered <Link href="/case-studies/pulseframe-mobile" className="text-primary hover:underline">Pulseframe Mobile</Link> for a complete real-world case study.
           </p>
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-emerald-500/30 bg-emerald-500/5 p-8 text-center">
-          <h3 className="font-display text-2xl font-bold tracking-tight">Ready to build your Android app?</h3>
-          <p className="mt-2 text-muted-foreground">
-            From first prototype to Play Store launch — we handle the entire journey.
+        <div className="mt-16 rounded-3xl border border-emerald-500/30 bg-emerald-500/5 p-8 text-center sm:p-10">
+          <h2 className="font-display text-2xl font-bold text-white">Ready to build your mobile app?</h2>
+          <p className="mt-2 text-sm text-muted-foreground max-w-xl mx-auto">
+            From first wireframe to App Store and Play Store approval — Devtacet engineers cross-platform mobile apps for startups and enterprises.
           </p>
-          <Link
-            href="/#contact"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Start a project
-            <ArrowUpRight className="size-4" />
-          </Link>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              <span>Start Mobile Project</span>
+              <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              href="/services/mobile-app-development"
+              className="rounded-full border border-zinc-700 bg-zinc-800/80 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-primary"
+            >
+              Mobile App Services
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-border pt-8">
-          <h3 className="mb-4 font-display text-lg font-semibold">Related articles</h3>
-          <div className="flex flex-col gap-3">
-            <Link href="/blog/web-development" className="text-muted-foreground transition-colors hover:text-primary">
-              → The Complete Guide to Modern Web Development in 2026
+          <h3 className="mb-4 font-display text-lg font-semibold text-white">Related Resources</h3>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-sm">
+            <Link href="/services/mobile-app-development" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-emerald-400 font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">Mobile App Development Services →</p>
             </Link>
-            <Link href="/blog/system-software" className="text-muted-foreground transition-colors hover:text-primary">
-              → Understanding System Software: The Foundation of Every Digital Product
+            <Link href="/case-studies/pulseframe-mobile" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-primary font-mono">// Case Study</span>
+              <p className="mt-1 font-semibold text-white">Pulseframe Mobile App Case Study →</p>
+            </Link>
+            <Link href="/blog/web-development" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-cyan-400 font-mono">// Blog</span>
+              <p className="mt-1 font-semibold text-white">Modern Web Development Guide →</p>
+            </Link>
+            <Link href="/services/web-development" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-purple-400 font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">Web Development Services →</p>
             </Link>
           </div>
         </div>

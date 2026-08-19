@@ -68,15 +68,15 @@ const teamMembers = [
 
 export function TeamSection() {
   return (
-    <section id="team" className="relative pt-16 pb-8 md:pt-20 md:pb-12">
-      <div className="mx-auto w-full max-w-7xl px-8 xl:px-16">
-        <div className="mb-6 flex flex-col gap-4 md:mb-8 md:flex-row md:items-end md:justify-between">
+    <section id="team" className="relative py-12 md:py-16">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 xl:px-16">
+        <div className="mb-6 flex flex-col gap-3 md:mb-8 md:flex-row md:items-end md:justify-between">
           <motion.h2
             initial={{ opacity: 0, y: 24 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display text-balance text-4xl font-bold tracking-tight md:text-5xl"
+            className="font-display text-balance text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
           >
             Meet the
             <br />
@@ -87,7 +87,7 @@ export function TeamSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-sm text-pretty leading-relaxed text-muted-foreground"
+            className="max-w-sm text-pretty text-xs sm:text-sm leading-relaxed text-muted-foreground"
           >
             A small, sharp crew that ships fast and cares deeply about
             every pixel and every line of code.
@@ -100,7 +100,7 @@ export function TeamSection() {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true, margin: '-60px' }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="relative mx-auto w-full max-w-7xl px-8 xl:px-16"
+        className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 md:px-8 xl:px-16"
       >
         <ChromaGrid
           items={teamMembers}

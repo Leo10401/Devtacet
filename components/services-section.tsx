@@ -9,6 +9,7 @@ import {
   LayoutDashboard,
   ArrowUpRight,
 } from 'lucide-react'
+import Link from 'next/link'
 import SpotlightCard from './SpotlightCard'
 
 const services = [
@@ -21,6 +22,7 @@ const services = [
       'iOS and Android apps that feel fast, look sharp, and survive the app store review on the first try.',
     image: 'https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800&q=80',
     tags: ['iOS & Android', 'React Native', 'Flutter'],
+    href: '/services/mobile-app-development',
   },
   {
     icon: Globe,
@@ -31,6 +33,7 @@ const services = [
       'Marketing sites, e-commerce, and full web apps engineered for speed — every second of load time costs you customers.',
     image: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=800&q=80',
     tags: ['Next.js', 'E-commerce', 'Web Apps'],
+    href: '/services/web-development',
   },
   {
     icon: BarChart3,
@@ -41,6 +44,7 @@ const services = [
       'Custom dashboards and pipelines that answer the questions you actually have — no more exporting to spreadsheets.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80',
     tags: ['Dashboards', 'Pipelines', 'Reporting'],
+    href: '/services/analytics',
   },
   {
     icon: TrendingUp,
@@ -51,6 +55,7 @@ const services = [
       'Technical SEO and content strategy that climbs the rankings and stays there — traffic that compounds month over month.',
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     tags: ['Technical SEO', 'Content', 'Growth'],
+    href: '/services/seo',
   },
   {
     icon: LayoutDashboard,
@@ -61,6 +66,7 @@ const services = [
       'Internal tools, ERP-lite systems, and automated reporting that replace spreadsheets, manual handoffs, and end-of-day chaos.',
     image: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=800&q=80',
     tags: ['MIS', 'ERP', 'Automation'],
+    href: '/services/custom-software',
   },
 ]
 
@@ -85,28 +91,42 @@ function ServiceCard({
       transition={{ duration: 0.5, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
       className="h-full"
     >
-      <a href="#contact" className="block h-full">
+      <Link href={service.href} className="block h-full">
         <SpotlightCard
           spotlightColor="rgba(168, 85, 247, 0.2)"
-          className="group flex h-full flex-col justify-between overflow-hidden !p-0"
+          className={`group flex h-full ${
+            featured ? 'flex-col md:flex-row' : 'flex-col'
+          } justify-between overflow-hidden !p-0`}
         >
           {/* Card Image Banner */}
           {service.image && (
-            <div className={`relative w-full overflow-hidden bg-black/50 ${featured ? 'h-48 sm:h-52' : 'h-44 sm:h-48'}`}>
+            <div
+              className={`relative overflow-hidden bg-black/50 ${
+                featured
+                  ? 'h-36 sm:h-44 md:h-auto md:w-44 lg:w-48 shrink-0'
+                  : 'h-32 sm:h-36 w-full'
+              }`}
+            >
               <img
                 src={service.image}
                 alt={service.title}
                 className="size-full object-cover transition-transform duration-500 group-hover:scale-105"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#161620] via-transparent to-black/30" />
+              <div
+                className={`absolute inset-0 ${
+                  featured
+                    ? 'bg-gradient-to-t from-[#161620] via-transparent to-black/30 md:bg-gradient-to-r md:from-transparent md:to-[#161620]'
+                    : 'bg-gradient-to-t from-[#161620] via-transparent to-black/30'
+                }`}
+              />
             </div>
           )}
 
-          <div className="flex flex-1 flex-col justify-between p-6 sm:p-7">
+          <div className="flex flex-1 flex-col justify-between p-4 sm:p-5">
             {/* Header: Icon & Number */}
             <div className="flex items-start justify-between">
-              <span className="flex size-11 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-primary backdrop-blur-sm transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
-                <Icon className="size-5" aria-hidden="true" />
+              <span className="flex size-9 shrink-0 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04] text-primary backdrop-blur-sm transition-colors group-hover:border-primary group-hover:bg-primary group-hover:text-primary-foreground">
+                <Icon className="size-4" aria-hidden="true" />
               </span>
               <span className="font-mono text-xs text-muted-foreground">
                 <span className="text-primary">//</span> {service.number}
@@ -114,39 +134,35 @@ function ServiceCard({
             </div>
 
             {/* Label, Title & Description */}
-            <div className="mt-5">
-              <span className="text-[11px] font-semibold uppercase tracking-widest text-primary/90">
+            <div className="mt-3">
+              <span className="text-[10px] font-semibold uppercase tracking-widest text-primary/90">
                 {service.label}
               </span>
-              <h3
-                className={`mt-1.5 font-display font-bold leading-snug tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1 ${
-                  featured ? 'text-xl sm:text-2xl' : 'text-lg sm:text-xl'
-                }`}
-              >
+              <h3 className="mt-1 font-display text-sm sm:text-base font-bold leading-snug tracking-tight text-white transition-transform duration-300 group-hover:translate-x-1">
                 {service.title}
               </h3>
-              <p className="mt-2 line-clamp-3 text-xs sm:text-sm leading-relaxed text-zinc-400">
+              <p className="mt-1.5 line-clamp-2 text-xs leading-relaxed text-zinc-400">
                 {service.description}
               </p>
             </div>
 
             {/* Footer: Tags & Arrow */}
-            <div className="mt-6 flex items-end justify-between gap-3 pt-3 border-t border-white/5">
-              <div className="flex flex-wrap gap-1.5">
+            <div className="mt-3.5 flex items-end justify-between gap-2 pt-2.5 border-t border-white/5">
+              <div className="flex flex-wrap gap-1">
                 {(featured ? service.tags : service.tags.slice(0, 2)).map((tag) => (
                   <span
                     key={tag}
-                    className="rounded-full border border-white/10 bg-white/[0.03] px-2.5 py-1 text-[11px] text-zinc-300"
+                    className="rounded-full border border-white/10 bg-white/[0.03] px-2 py-0.5 text-[10px] text-zinc-300"
                   >
                     {tag}
                   </span>
                 ))}
               </div>
-              <ArrowUpRight className="size-5 shrink-0 text-zinc-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
+              <ArrowUpRight className="size-4 shrink-0 text-zinc-400 transition-all group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:text-primary" />
             </div>
           </div>
         </SpotlightCard>
-      </a>
+      </Link>
     </motion.div>
   )
 }
@@ -158,7 +174,7 @@ export function ServicesSection() {
   return (
     <section
       id="services"
-      className="relative flex min-h-svh flex-col justify-center overflow-hidden px-8 py-16 xl:px-16"
+      className="relative flex min-h-svh flex-col justify-center overflow-hidden px-4 sm:px-6 md:px-8 py-10 md:py-14 xl:px-16"
     >
       {/* faint grid backdrop, echoing the hero */}
       <div
@@ -171,15 +187,15 @@ export function ServicesSection() {
         }}
       />
 
-      <div className="mx-auto w-full max-w-7xl">
-        <div className="mb-10 flex flex-col gap-4 md:mb-12 md:flex-row md:items-end md:justify-between">
+      <div className="mx-auto w-full max-w-6xl">
+        <div className="mb-6 flex flex-col gap-3 md:mb-8 md:flex-row md:items-end md:justify-between">
           <div>
             <motion.p
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-              className="mb-3 font-mono text-xs text-primary"
+              className="mb-2 font-mono text-xs text-primary"
             >
               $ ls ./services
             </motion.p>
@@ -188,7 +204,7 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: '-80px' }}
               transition={{ duration: 0.6, delay: 0.05, ease: [0.22, 1, 0.36, 1] }}
-              className="font-display text-balance text-5xl font-bold tracking-tight md:text-6xl"
+              className="font-display text-balance text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
             >
               We build things
               <br />
@@ -200,7 +216,7 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.15, ease: [0.22, 1, 0.36, 1] }}
-            className="max-w-sm text-pretty leading-relaxed text-muted-foreground"
+            className="max-w-sm text-pretty text-xs sm:text-sm leading-relaxed text-muted-foreground"
           >
             Five disciplines, one team. Everything you need to ship a digital
             product, run the business behind it, and make sure the world
@@ -208,13 +224,13 @@ export function ServicesSection() {
           </motion.p>
         </div>
 
-        <div className="grid gap-5 md:grid-cols-3">
+        <div className="grid gap-3.5 sm:gap-4 md:grid-cols-3">
           {primaryThree.map((service, i) => (
             <ServiceCard key={service.number} service={service} index={i} />
           ))}
         </div>
 
-        <div className="mt-5 grid gap-5 md:grid-cols-2">
+        <div className="mt-3.5 sm:mt-4 grid gap-3.5 sm:gap-4 md:grid-cols-2">
           {remainingTwo.map((service, i) => (
             <ServiceCard
               key={service.number}

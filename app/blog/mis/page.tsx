@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowLeft, ArrowUpRight } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ArrowUpRight } from 'lucide-react'
+import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
   title: 'Management Information Systems: How MIS Drives Business Decisions',
@@ -35,10 +36,19 @@ function ArticleJsonLd() {
     headline: 'Management Information Systems: How MIS Drives Business Decisions',
     description:
       'How modern MIS architectures turn raw operational data into executive dashboards, automated reports, and competitive advantage.',
-    author: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me' },
-    publisher: { '@type': 'Organization', name: 'Devtacet', url: 'https://devtacet.me', logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' } },
+    author: {
+      '@type': 'Organization',
+      name: 'Devtacet Engineering Team',
+      url: 'https://devtacet.me/about',
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Devtacet',
+      url: 'https://devtacet.me',
+      logo: { '@type': 'ImageObject', url: 'https://devtacet.me/icon.svg' },
+    },
     datePublished: '2026-08-15',
-    dateModified: '2026-08-15',
+    dateModified: '2026-08-18',
     mainEntityOfPage: 'https://devtacet.me/blog/mis',
     keywords: 'MIS, management information systems, business intelligence, data analytics',
   }
@@ -50,13 +60,13 @@ export default function MisPage() {
     <>
       <ArticleJsonLd />
       <article className="mx-auto max-w-3xl px-4 md:px-6">
-        <Link
-          href="/blog"
-          className="mb-8 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-primary"
-        >
-          <ArrowLeft className="size-4" />
-          Back to Blog
-        </Link>
+        <Breadcrumbs
+          items={[
+            { label: 'Blog', href: '/blog' },
+            { label: 'Management Information Systems (MIS)' },
+          ]}
+          className="mb-8"
+        />
 
         <header className="mb-10">
           <span className="mb-3 inline-block rounded-full bg-cyan-500/10 px-3 py-1 text-xs font-medium text-cyan-400">
@@ -65,8 +75,8 @@ export default function MisPage() {
           <h1 className="font-display text-balance text-3xl font-bold tracking-tight md:text-5xl">
             Management Information Systems: How MIS Drives Business Decisions
           </h1>
-          <p className="mt-4 text-muted-foreground">
-            Published by <span className="text-foreground font-medium">Devtacet</span> · 8 min read
+          <p className="mt-4 text-muted-foreground text-sm">
+            Published by <span className="text-foreground font-medium">Devtacet Engineering Team</span> · 8 min read · Updated August 2026
           </p>
         </header>
 
@@ -74,7 +84,7 @@ export default function MisPage() {
           <p className="text-lg leading-relaxed text-muted-foreground">
             Every business generates data. Very few turn that data into decisions. Management Information
             Systems (MIS) bridge this gap — transforming scattered operational data into structured
-            dashboards, automated reports, and decision-support tools that executives actually use.
+            dashboards, automated reports, and decision-support tools engineered at <Link href="/" className="text-primary hover:underline">Devtacet</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -84,7 +94,7 @@ export default function MisPage() {
             An MIS is a computerized system that collects, processes, stores, and distributes information
             to support managerial decision-making, coordination, control, and analysis within an
             organization. It sits at the intersection of technology, business processes, and human
-            decision-making — not just a database, but a complete information processing pipeline.
+            decision-making — not just a database, but a complete information processing pipeline. Learn about our <Link href="/services/custom-software" className="text-primary hover:underline">Custom Software &amp; MIS Services</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -113,7 +123,7 @@ export default function MisPage() {
           <p className="leading-relaxed text-muted-foreground">
             DSS helps managers analyze complex scenarios using &ldquo;what-if&rdquo; modeling, trend analysis, and
             predictive algorithms. Unlike static reports, DSS is interactive — users adjust parameters
-            and see impact in real time.
+            and see impact in real time. Check out our <Link href="/services/analytics" className="text-primary hover:underline">Data Analytics Tools &amp; Dashboards</Link>.
           </p>
 
           <h3 className="mt-8 mb-3 font-display text-xl font-semibold">Executive Information Systems (EIS)</h3>
@@ -130,7 +140,7 @@ export default function MisPage() {
             Off-the-shelf BI tools work for standard reporting but fall short when business processes are
             unique. At Devtacet, we build custom MIS solutions using Node.js for data pipeline
             orchestration, MongoDB and PostgreSQL for storage, and React-based dashboards with interactive
-            charts (Chart.js, D3.js) that map directly to client-specific KPIs.
+            charts that map directly to client-specific KPIs. Examine our real case study on <Link href="/case-studies/atlas-redesign" className="text-primary hover:underline">Atlas Analytics Platform</Link>.
           </p>
 
           <h2 className="mt-12 mb-4 font-display text-2xl font-bold tracking-tight md:text-3xl">
@@ -146,28 +156,46 @@ export default function MisPage() {
         </div>
 
         {/* CTA */}
-        <div className="mt-16 rounded-2xl border border-cyan-500/30 bg-cyan-500/5 p-8 text-center">
-          <h3 className="font-display text-2xl font-bold tracking-tight">Need a custom analytics dashboard?</h3>
-          <p className="mt-2 text-muted-foreground">
-            We build MIS solutions that replace spreadsheets with real-time decision support.
+        <div className="mt-16 rounded-3xl border border-cyan-500/30 bg-cyan-500/5 p-8 text-center sm:p-10">
+          <h2 className="font-display text-2xl font-bold text-white">Need a custom analytics dashboard or MIS?</h2>
+          <p className="mt-2 text-sm text-muted-foreground max-w-xl mx-auto">
+            Devtacet builds custom MIS solutions that replace manual spreadsheets with real-time decision support.
           </p>
-          <Link
-            href="/#contact"
-            className="mt-6 inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-          >
-            Talk to our data team
-            <ArrowUpRight className="size-4" />
-          </Link>
+          <div className="mt-6 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-2.5 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              <span>Talk to Our Data Team</span>
+              <ArrowRight className="size-4" />
+            </Link>
+            <Link
+              href="/services/analytics"
+              className="rounded-full border border-zinc-700 bg-zinc-800/80 px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:border-primary"
+            >
+              Analytics Services
+            </Link>
+          </div>
         </div>
 
         <div className="mt-12 border-t border-border pt-8">
-          <h3 className="mb-4 font-display text-lg font-semibold">Related articles</h3>
-          <div className="flex flex-col gap-3">
-            <Link href="/blog/system-software" className="text-muted-foreground transition-colors hover:text-primary">
-              → Understanding System Software: The Foundation of Every Digital Product
+          <h3 className="mb-4 font-display text-lg font-semibold text-white">Related Resources</h3>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 text-sm">
+            <Link href="/services/custom-software" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-fuchsia-400 font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">Custom Software & MIS Services →</p>
             </Link>
-            <Link href="/blog/web-development" className="text-muted-foreground transition-colors hover:text-primary">
-              → The Complete Guide to Modern Web Development in 2026
+            <Link href="/case-studies/atlas-redesign" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-primary font-mono">// Case Study</span>
+              <p className="mt-1 font-semibold text-white">Atlas Analytics SaaS Case Study →</p>
+            </Link>
+            <Link href="/services/analytics" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-purple-400 font-mono">// Service</span>
+              <p className="mt-1 font-semibold text-white">Data Analytics Systems →</p>
+            </Link>
+            <Link href="/blog/system-software" className="rounded-xl border border-zinc-800 bg-zinc-900/40 p-4 transition-colors hover:border-primary">
+              <span className="text-xs text-pink-400 font-mono">// Blog</span>
+              <p className="mt-1 font-semibold text-white">System Software Architecture Guide →</p>
             </Link>
           </div>
         </div>

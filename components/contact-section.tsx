@@ -65,18 +65,18 @@ export function ContactSection() {
   }
 
   return (
-    <section id="contact" className="w-full my-auto px-8 py-6 md:py-10 xl:px-16">
+    <section id="contact" className="w-full my-auto px-4 sm:px-6 md:px-8 py-8 md:py-14 xl:px-16">
       <div className="mx-auto w-full max-w-7xl">
         {/* Outer Card Container */}
-        <div className="relative overflow-hidden bg-[#111218] border border-zinc-800/80 rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+        <div className="relative overflow-hidden bg-[#111218] border border-zinc-800/80 rounded-3xl p-4 sm:p-6 lg:p-10 shadow-2xl">
           {/* Background subtle purple glow */}
           <div className="absolute -top-24 -left-24 w-96 h-96 bg-purple-600/10 rounded-full blur-3xl pointer-events-none" />
           <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-12 items-center">
             {/* Left Form Card */}
             <div className="lg:col-span-6 xl:col-span-5">
-              <div className="relative rounded-2xl bg-[#0b0c10] border border-zinc-800/90 shadow-2xl p-5 sm:p-6 overflow-hidden">
+              <div className="relative rounded-2xl bg-[#0b0c10] border border-zinc-800/90 shadow-2xl p-4 sm:p-6 overflow-hidden">
                 {/* Purple top border line */}
                 <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-purple-500 via-fuchsia-500 to-indigo-500" />
 
@@ -86,12 +86,12 @@ export function ContactSection() {
                     <p className="text-[10px] text-zinc-400 font-bold uppercase tracking-wider">
                       DEVTACET SUPPORT
                     </p>
-                    <h3 className="text-lg sm:text-xl font-bold tracking-tight text-white font-display mt-0.5">
+                    <h3 className="text-base sm:text-xl font-bold tracking-tight text-white font-display mt-0.5">
                       Need project help?
                     </h3>
                   </div>
-                  <div className="size-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 shrink-0">
-                    <MessageSquare className="size-4" />
+                  <div className="size-8 sm:size-9 rounded-xl bg-zinc-900 border border-zinc-800 flex items-center justify-center text-zinc-400 shrink-0">
+                    <MessageSquare className="size-3.5 sm:size-4" />
                   </div>
                 </div>
 
@@ -212,7 +212,7 @@ export function ContactSection() {
                         placeholder="Tell us what you want to build—timeline, features, or idea..."
                         value={formData.message}
                         onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full resize-none px-3 py-2 text-xs sm:text-sm rounded-lg bg-[#161720] border border-zinc-700/80 text-zinc-100 placeholder:text-zinc-500 outline-none focus:ring-2 focus:ring-purple-500 transition-all min-h-[85px]"
+                        className="w-full resize-none px-3 py-2 text-xs sm:text-sm rounded-lg bg-[#161720] border border-zinc-700/80 text-zinc-100 placeholder:text-zinc-500 outline-none focus:ring-2 focus:ring-purple-500 transition-all min-h-[80px]"
                       />
                     </div>
 
@@ -251,18 +251,18 @@ export function ContactSection() {
 
             {/* Right Copy & Badges Column */}
             <div className="lg:col-span-6 xl:col-span-7 flex flex-col justify-center">
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-[#d8b4fe] via-[#c084fc] to-[#a855f7] bg-clip-text text-transparent font-display leading-[1.15]">
+              <h2 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-[#d8b4fe] via-[#c084fc] to-[#a855f7] bg-clip-text text-transparent font-display leading-[1.15]">
                 Let&apos;s build it.
               </h2>
-              <p className="text-xs sm:text-sm text-zinc-400 mt-3 max-w-lg leading-relaxed">
+              <p className="text-xs sm:text-sm text-zinc-400 mt-2 sm:mt-3 max-w-lg leading-relaxed">
                 Full-stack engineering, design systems, and cloud architecture. Send us your project details and we will reply within 24 hours.
               </p>
 
               {/* Feature Highlights */}
-              <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-lg">
+              <div className="mt-5 sm:mt-6 grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 max-w-lg">
                 <div className="flex items-start gap-3">
-                  <div className="size-10 rounded-xl bg-[#1c1d28] border border-purple-500/20 flex items-center justify-center text-[#c084fc] shrink-0">
-                    <Clock3 className="size-4" />
+                  <div className="size-9 sm:size-10 rounded-xl bg-[#1c1d28] border border-purple-500/20 flex items-center justify-center text-[#c084fc] shrink-0">
+                    <Clock3 className="size-3.5 sm:size-4" />
                   </div>
                   <div>
                     <p className="text-white font-bold text-xs sm:text-sm">Quick response</p>
@@ -271,8 +271,8 @@ export function ContactSection() {
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="size-10 rounded-xl bg-[#1c1d28] border border-purple-500/20 flex items-center justify-center text-[#c084fc] shrink-0">
-                    <Code2 className="size-4" />
+                  <div className="size-9 sm:size-10 rounded-xl bg-[#1c1d28] border border-purple-500/20 flex items-center justify-center text-[#c084fc] shrink-0">
+                    <Code2 className="size-3.5 sm:size-4" />
                   </div>
                   <div>
                     <p className="text-white font-bold text-xs sm:text-sm">Clear roadmap</p>
@@ -282,20 +282,20 @@ export function ContactSection() {
               </div>
 
               {/* Direct Contact Card */}
-              <div className="mt-6">
-                <div className="inline-flex items-center gap-3 sm:gap-4 rounded-2xl bg-[#161720] border border-zinc-800/90 shadow-xl p-2.5 sm:p-3 max-w-md w-full justify-between">
+              <div className="mt-5 sm:mt-6">
+                <div className="inline-flex flex-wrap sm:flex-nowrap items-center gap-3 sm:gap-4 rounded-2xl bg-[#161720] border border-zinc-800/90 shadow-xl p-2.5 sm:p-3 max-w-md w-full justify-between">
                   <div className="flex items-center gap-3 min-w-0">
                     <img
                       src="/Ayush_Kumar_Yadav.png"
-                      alt="Ayush Kumar"
-                      className="size-10 rounded-xl object-cover border border-zinc-700 shrink-0"
+                      alt="Ayush Kumar Yadav"
+                      className="size-9 sm:size-10 rounded-xl object-cover border border-zinc-700 shrink-0"
                     />
                     <div className="min-w-0">
                       <p className="text-[10px] text-[#c084fc] leading-none uppercase tracking-wider font-bold">
-                        LEAD
+                        LEAD ENGINEER
                       </p>
                       <p className="text-white font-bold text-xs sm:text-sm tracking-tight truncate mt-1">
-                        Ayush Kumar
+                        Ayush Kumar Yadav
                       </p>
                     </div>
                   </div>

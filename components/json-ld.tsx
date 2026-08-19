@@ -3,45 +3,116 @@ export function JsonLd() {
 
   const organizationSchema = {
     '@context': 'https://schema.org',
-    '@type': 'ProfessionalService',
+    '@type': ['Organization', 'ProfessionalService'],
     '@id': `${baseUrl}/#organization`,
     name: 'Devtacet',
-    legalName: 'Devtacet Digital Studio',
+    legalName: 'Devtacet',
     url: baseUrl,
     logo: `${baseUrl}/icon.svg`,
     image: `${baseUrl}/og-image.png`,
     description:
-      'Devtacet is a digital studio building mobile apps, websites, and data analytics tools, backed by SEO marketing that gets you found.',
-    priceRange: '$$$',
+      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+    email: 'mailto:hello@devtacet.me',
     address: {
       '@type': 'PostalAddress',
-      addressCountry: 'US',
+      addressLocality: 'Lucknow',
+      addressRegion: 'Uttar Pradesh',
+      addressCountry: 'IN',
     },
+    geo: {
+      '@type': 'GeoCoordinates',
+      latitude: 26.8467,
+      longitude: 80.9462,
+    },
+    areaServed: [
+      {
+        '@type': 'City',
+        name: 'Lucknow',
+      },
+      {
+        '@type': 'Country',
+        name: 'India',
+      },
+      {
+        '@type': 'AdministrativeArea',
+        name: 'Worldwide',
+      },
+    ],
     sameAs: [
       'https://github.com/Leo10401/Devtacet',
       'https://twitter.com/devtacet',
+      'https://linkedin.com/company/devtacet',
     ],
     knowsAbout: [
+      'Web Development',
       'Mobile App Development',
-      'Website Development',
-      'Data Analytics Tools',
-      'Technical SEO',
-      'Generative Engine Optimization',
-      '7 Stages of Web Development',
-      'Full-Stack Web Development',
-      'Senior Engineering Team',
-      '30-60-90 Project Plan',
+      'Custom Software Development',
+      'Data Analytics Systems',
+      'Search Engine Optimization (SEO)',
+      'Generative Engine Optimization (GEO)',
+      'Social Media Marketing',
       'Next.js',
+      'React 19',
       'React Native',
+      'Flutter',
       'TypeScript',
       'Tailwind CSS',
+      'Node.js',
+      'MongoDB',
     ],
-    offers: {
-      '@type': 'AggregateOffer',
-      priceCurrency: 'USD',
-      highPrice: '50000',
-      lowPrice: '2500',
-      offerCount: '4',
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Digital Solutions Services',
+      itemListElement: [
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Website Development',
+            url: `${baseUrl}/services/web-development`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Mobile App Development',
+            url: `${baseUrl}/services/mobile-app-development`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Custom Software Development',
+            url: `${baseUrl}/services/custom-software`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Data Analytics Systems',
+            url: `${baseUrl}/services/analytics`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'SEO & Generative Engine Optimization',
+            url: `${baseUrl}/services/seo`,
+          },
+        },
+        {
+          '@type': 'Offer',
+          itemOffered: {
+            '@type': 'Service',
+            name: 'Social Media Marketing',
+            url: `${baseUrl}/services/social-media-marketing`,
+          },
+        },
+      ],
     },
   }
 
@@ -50,9 +121,10 @@ export function JsonLd() {
     '@type': 'WebSite',
     '@id': `${baseUrl}/#website`,
     url: baseUrl,
-    name: 'Devtacet — Digital Studio',
+    name: 'Devtacet',
+    alternateName: ['Devtacet Digital Solutions', 'Devtacet Lucknow'],
     description:
-      'Digital studio building mobile apps, websites, and data analytics tools with SEO & AI marketing.',
+      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
     publisher: {
       '@id': `${baseUrl}/#organization`,
     },
@@ -68,11 +140,11 @@ export function JsonLd() {
         position: 1,
         item: {
           '@type': 'Service',
-          name: 'Mobile App Development',
+          name: 'Website Development',
           description:
-            'iOS and Android apps built with React Native & Flutter that feel fast, look sharp, and navigate app store reviews seamlessly.',
+            'High-performance websites, web applications, and e-commerce platforms engineered with Next.js, React 19, and TypeScript for speed and conversion.',
           provider: { '@id': `${baseUrl}/#organization` },
-          url: `${baseUrl}#services`,
+          url: `${baseUrl}/services/web-development`,
         },
       },
       {
@@ -80,11 +152,11 @@ export function JsonLd() {
         position: 2,
         item: {
           '@type': 'Service',
-          name: 'Website Development',
+          name: 'Mobile App Development',
           description:
-            'Marketing sites, e-commerce, and full web apps engineered with Next.js for sub-second performance and high conversion.',
+            'Cross-platform iOS and Android mobile applications built with React Native and Flutter for optimal performance and native user experience.',
           provider: { '@id': `${baseUrl}/#organization` },
-          url: `${baseUrl}#services`,
+          url: `${baseUrl}/services/mobile-app-development`,
         },
       },
       {
@@ -92,11 +164,11 @@ export function JsonLd() {
         position: 3,
         item: {
           '@type': 'Service',
-          name: 'Data Analytics Tools',
+          name: 'Custom Software Development',
           description:
-            'Custom dashboards, automated data pipelines, and reporting systems turning complex business data into clear decision support.',
+            'Tailored internal tools, MIS reporting architectures, ERP-lite platforms, and automated workflow backends engineered to scale business operations.',
           provider: { '@id': `${baseUrl}/#organization` },
-          url: `${baseUrl}#services`,
+          url: `${baseUrl}/services/custom-software`,
         },
       },
       {
@@ -104,11 +176,35 @@ export function JsonLd() {
         position: 4,
         item: {
           '@type': 'Service',
-          name: 'SEO & AI Marketing (GEO)',
+          name: 'Data Analytics Systems',
           description:
-            'Technical SEO, content strategy, and Generative Engine Optimization climbing traditional SERPs and AI search engines.',
+            'Interactive executive dashboards, automated ETL data pipelines, and decision-support analytics transforming operational metrics into strategic clarity.',
           provider: { '@id': `${baseUrl}/#organization` },
-          url: `${baseUrl}#services`,
+          url: `${baseUrl}/services/analytics`,
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 5,
+        item: {
+          '@type': 'Service',
+          name: 'SEO & Generative Engine Optimization',
+          description:
+            'Technical SEO, Schema.org knowledge graph engineering, and Generative Engine Optimization (GEO) ensuring top visibility across Google and AI engines.',
+          provider: { '@id': `${baseUrl}/#organization` },
+          url: `${baseUrl}/services/seo`,
+        },
+      },
+      {
+        '@type': 'ListItem',
+        position: 6,
+        item: {
+          '@type': 'Service',
+          name: 'Social Media Marketing',
+          description:
+            'Data-driven social media growth strategies, content distribution loops, and brand positioning tailored for digital products and startups.',
+          provider: { '@id': `${baseUrl}/#organization` },
+          url: `${baseUrl}/services/social-media-marketing`,
         },
       },
     ],
@@ -120,6 +216,22 @@ export function JsonLd() {
     mainEntity: [
       {
         '@type': 'Question',
+        name: 'What does Devtacet do?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Where is Devtacet based?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Devtacet is headquartered in Lucknow, Uttar Pradesh, India, serving local businesses in Lucknow as well as startups and enterprises globally across India, North America, Europe, and Asia-Pacific.',
+        },
+      },
+      {
+        '@type': 'Question',
         name: 'What are the 7 stages of web development at Devtacet?',
         acceptedAnswer: {
           '@type': 'Answer',
@@ -128,26 +240,10 @@ export function JsonLd() {
       },
       {
         '@type': 'Question',
-        name: 'What types of web development does Devtacet handle?',
+        name: 'Does Devtacet develop cross-platform mobile apps?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'We provide full-stack web development encompassing Frontend Development (React 19, Next.js, Tailwind CSS), Backend Development (Node.js, Express, REST/GraphQL APIs, Databases), and Enterprise Web Applications (E-commerce, SaaS platforms, and internal analytics portals).',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is the developer experience level (L1 to L7) at Devtacet?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Unlike traditional agencies that assign junior (L1/L2) engineers or account managers to client accounts, Devtacet pairs clients directly with senior staff engineers (L5 to L7 tier experts) who own your codebase from architecture to deployment.',
-        },
-      },
-      {
-        '@type': 'Question',
-        name: 'What is Devtacet’s 30-60-90 day project onboarding plan?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'Days 1–30 focus on rapid discovery, wireframing, and initial architecture build; Days 31–60 focus on core feature engineering, integration, and UI polishing; Days 61–90 focus on QA testing, production deployment, and executing Generative Engine Optimization (GEO) & SEO marketing.',
+          text: 'Yes. Devtacet builds iOS and Android mobile apps using React Native and Flutter with native performance, offline-first data synchronization, seamless app store compliance, and smooth UI animations.',
         },
       },
       {
@@ -155,15 +251,15 @@ export function JsonLd() {
         name: 'How does Devtacet optimize for AI Search & LLMs (GEO)?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Devtacet optimizes sites using structured Schema.org JSON-LD knowledge graphs, dynamic XML sitemaps, customized robots.txt rules for AI bots (GPTBot, PerplexityBot, ClaudeBot), semantic HTML markup, and standardized llms.txt integration for direct LLM indexing.',
+          text: 'We combine traditional technical SEO with Generative Engine Optimization (GEO). This includes Schema.org JSON-LD knowledge graphs, llms.txt integration, entity-rich factual structuring, and direct-answer formatting for engines like ChatGPT, Perplexity, Claude, and Google AI Overviews.',
         },
       },
       {
         '@type': 'Question',
-        name: 'What tech stack do you use to build products?',
+        name: 'What tech stack does Devtacet use?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Devtacet specializes in modern engineering stacks including Next.js, React 19, TypeScript, Tailwind CSS, Node.js, Mongoose/MongoDB, React Native, Flutter, and Vercel cloud infrastructure.',
+          text: 'We specialize in Next.js (App Router), React 19, TypeScript, Tailwind CSS, Node.js, Express, MongoDB/Mongoose, React Native, Flutter, and Vercel cloud infrastructure.',
         },
       },
     ],

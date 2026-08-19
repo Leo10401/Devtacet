@@ -134,8 +134,8 @@ const item = {
 
 export default function BlogIndexPage() {
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-16 md:pt-24 pb-20">
-      <Breadcrumbs items={[{ label: 'Blog & Articles' }]} className="mb-8" />
+    <div className="mx-auto max-w-6xl px-4 sm:px-6 pt-2 sm:pt-4 pb-20">
+      <Breadcrumbs items={[{ label: 'Blog & Articles' }]} className="mb-4 sm:mb-6" />
       {/* Heading */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}

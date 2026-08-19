@@ -3,7 +3,7 @@
  * Usage: node scripts/submit-indexnow.mjs
  */
 
-const HOST = 'devtacet.me'
+const HOST = 'www.devtacet.me'
 const KEY = '532b6ff78ba841d7901d0d3bb5e02fe1'
 const KEY_LOCATION = `https://${HOST}/${KEY}.txt`
 

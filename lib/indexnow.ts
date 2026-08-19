@@ -1,5 +1,5 @@
 export const INDEXNOW_KEY = '532b6ff78ba841d7901d0d3bb5e02fe1'
-export const DEFAULT_HOST = 'devtacet.me'
+export const DEFAULT_HOST = 'www.devtacet.me'
 export const DEFAULT_KEY_LOCATION = `https://${DEFAULT_HOST}/${INDEXNOW_KEY}.txt`
 
 export const INDEXNOW_ENDPOINTS = [

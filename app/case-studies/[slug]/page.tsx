@@ -181,13 +181,13 @@ export async function generateMetadata({
 
   return {
     title: `${study.title} | Case Study | Devtacet`,
-    description: study.description,
+    description: study.overview,
     alternates: {
       canonical: `/case-studies/${study.slug}`,
     },
     openGraph: {
       title: `${study.title} | Devtacet Case Study`,
-      description: study.description,
+      description: study.overview,
       url: `https://devtacet.me/case-studies/${study.slug}`,
       type: 'article',
       images: [{ url: study.image, alt: study.title }],

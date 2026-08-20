@@ -232,6 +232,7 @@ const ChromaGrid = ({
                     <button
                       type="button"
                       title="LinkedIn Profile"
+                      aria-label="LinkedIn Profile"
                       onClick={(e) => handleSocialClick(e, socials.linkedin)}
                       className="group/btn relative flex size-9 w-full max-w-[38px] items-center justify-center rounded-lg border border-white/10 bg-white/[0.06] text-zinc-300 transition-all hover:scale-105 hover:border-sky-500/50 hover:bg-sky-500/20 hover:text-sky-400"
                     >
@@ -247,6 +248,7 @@ const ChromaGrid = ({
                     <button
                       type="button"
                       title="GitHub Profile"
+                      aria-label="GitHub Profile"
                       onClick={(e) => handleSocialClick(e, socials.github)}
                       className="group/btn relative flex size-9 w-full max-w-[38px] items-center justify-center rounded-lg border border-white/10 bg-white/[0.06] text-zinc-300 transition-all hover:scale-105 hover:border-purple-500/50 hover:bg-purple-500/20 hover:text-purple-300"
                     >
@@ -262,6 +264,7 @@ const ChromaGrid = ({
                     <button
                       type="button"
                       title="Portfolio Website"
+                      aria-label="Portfolio Website"
                       onClick={(e) => handleSocialClick(e, socials.portfolio)}
                       className="group/btn relative flex size-9 w-full max-w-[38px] items-center justify-center rounded-lg border border-white/10 bg-white/[0.06] text-zinc-300 transition-all hover:scale-105 hover:border-emerald-500/50 hover:bg-emerald-500/20 hover:text-emerald-400"
                     >
@@ -277,6 +280,7 @@ const ChromaGrid = ({
                     <button
                       type="button"
                       title="Contact Email"
+                      aria-label="Contact Email"
                       onClick={(e) => handleSocialClick(e, socials.email)}
                       className="group/btn relative flex size-9 w-full max-w-[38px] items-center justify-center rounded-lg border border-white/10 bg-white/[0.06] text-zinc-300 transition-all hover:scale-105 hover:border-amber-500/50 hover:bg-amber-500/20 hover:text-amber-400"
                     >

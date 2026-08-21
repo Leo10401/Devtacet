@@ -17,16 +17,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'About Devtacet | Digital Solutions Company Based in Lucknow, India',
+  title: 'About Devtacet | Engineering-First Software Studio in Lucknow, India',
   description:
-    'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+    'Meet Devtacet — a dedicated team of senior software engineers and architects in Lucknow, India building resilient digital products, custom internal tools, and high-performance web systems.',
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: 'About Devtacet | Digital Solutions Company',
+    title: 'About Devtacet | Engineering-First Software Studio',
     description:
-      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems.',
+      'Senior software engineers and architects in Lucknow, India building resilient digital products, custom software, and mobile apps without agency bloat.',
     url: 'https://devtacet.me/about',
     type: 'website',
   },
@@ -69,7 +69,7 @@ export default function AboutPage() {
       url: 'https://devtacet.me',
       logo: 'https://devtacet.me/icon.svg',
       description:
-        'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+        'Devtacet is an engineering-first software studio based in Lucknow, India. We partner with ambitious founders and SMEs worldwide to engineer resilient web applications, mobile apps, custom MIS software, and data analytics systems.',
       address: {
         '@type': 'PostalAddress',
         addressLocality: 'Lucknow',
@@ -100,7 +100,7 @@ export default function AboutPage() {
               Engineering Digital Solutions with Craft & Ownership
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+              Devtacet is an engineering-first digital studio based in Lucknow, India. Founded by senior software architects, we partner with ambitious founders and SMEs worldwide to build resilient software, automate internal operations, and accelerate digital growth.
             </p>
           </div>
 

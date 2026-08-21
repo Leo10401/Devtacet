@@ -39,7 +39,7 @@ export function SiteFooter() {
             </Link>
 
             <p className="mt-4 max-w-md text-xs sm:text-sm leading-relaxed text-zinc-400">
-              Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+              Senior full-stack engineering studio based in Lucknow, India. We partner with ambitious founders to build high-performance web applications, mobile apps, custom MIS architectures, and data systems.
             </p>
 
             <div className="mt-5 flex items-center gap-2 text-xs text-zinc-400 font-mono">
@@ -76,7 +76,7 @@ export function SiteFooter() {
                 <LinkedinIcon className="size-4" />
               </a>
               <a
-                href="mailto:hello@devtacet.me"
+                href="mailto:devtacet@gmail.com"
                 aria-label="Email Devtacet"
                 className="flex size-9 items-center justify-center rounded-lg border border-zinc-800 bg-zinc-900/80 text-zinc-400 transition-colors hover:border-primary hover:text-white"
               >
@@ -197,9 +197,9 @@ export function SiteFooter() {
           <p>© {new Date().getFullYear()} Devtacet. All rights reserved.</p>
           <div className="flex items-center gap-6 text-xs text-zinc-500">
             <span>Lucknow, Uttar Pradesh, India</span>
-            <Link href="/contact" className="transition-colors hover:text-zinc-300">
-              hello@devtacet.me
-            </Link>
+            <a href="mailto:devtacet@gmail.com" className="transition-colors hover:text-zinc-300">
+              devtacet@gmail.com
+            </a>
           </div>
         </div>
       </div>

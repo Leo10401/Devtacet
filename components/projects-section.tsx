@@ -12,7 +12,7 @@ const defaultProjects = [
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=1000&q=85',
     description:
       'Next-gen analytics platform with real-time stream processing, customizable charts, and sub-millisecond metrics queries.',
-    href: '#',
+    href: '/case-studies/atlas-redesign',
   },
   {
     title: 'Relay Cloud API',
@@ -20,7 +20,7 @@ const defaultProjects = [
     image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1000&q=85',
     description:
       'High-throughput edge routing engine and distributed microservices with global multi-region caching.',
-    href: '#',
+    href: '/case-studies/relay-cloud-api',
   },
   {
     title: 'Edge Deploy UI',
@@ -28,7 +28,7 @@ const defaultProjects = [
     image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1000&q=85',
     description:
       'Autonomous deployment orchestration and preview branch management for global modern web applications.',
-    href: '#',
+    href: '/case-studies/edge-deploy-ui',
   },
   {
     title: 'Pulseframe Mobile',
@@ -36,7 +36,7 @@ const defaultProjects = [
     image: 'https://images.unsplash.com/photo-1522542550221-31fd19575a2d?w=1000&q=85',
     description:
       'Ultra-fast cross-platform design system and collaboration workspace built with React Native and WebAssembly.',
-    href: '#',
+    href: '/case-studies/pulseframe-mobile',
   },
 ]
 

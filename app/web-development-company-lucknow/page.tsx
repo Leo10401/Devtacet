@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Web Development Company in Lucknow | Devtacet',
     description:
-      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems.',
+      'Leading web development company in Lucknow engineering high-speed Next.js websites, mobile apps, custom software, and technical SEO for growing businesses.',
     url: 'https://devtacet.me/web-development-company-lucknow',
     type: 'website',
   },
@@ -66,7 +66,7 @@ export default function LucknowWebDevelopmentPage() {
     image: 'https://devtacet.me/og-image.png',
     url: 'https://devtacet.me/web-development-company-lucknow',
     telephone: '+91',
-    email: 'hello@devtacet.me',
+    email: 'devtacet@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Lucknow',
@@ -84,7 +84,7 @@ export default function LucknowWebDevelopmentPage() {
       { '@type': 'Country', name: 'India' },
     ],
     description:
-      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+      'Premier web development and software engineering company based in Lucknow, Uttar Pradesh, India. We engineer high-performance Next.js websites, mobile apps, custom MIS systems, and local SEO solutions.',
   }
 
   const faqSchema = {
@@ -128,7 +128,7 @@ export default function LucknowWebDevelopmentPage() {
               Web Development Company in Lucknow
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+              Devtacet is Lucknow’s premier web development company, engineering high-speed Next.js websites, mobile applications, custom MIS platforms, and local SEO strategies for Lucknow businesses and global startups.
             </p>
           </div>
 

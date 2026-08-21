@@ -405,7 +405,7 @@ export function Hero() {
           transition={{ duration: 0.4, delay: 0.3 }}
           className="mt-4 sm:mt-5 max-w-2xl text-pretty text-xs leading-relaxed text-zinc-400 sm:text-base"
         >
-          Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+          Senior full-stack engineering studio in Lucknow, India. We partner with ambitious founders and businesses to build high-velocity Next.js web platforms, React Native mobile apps, custom MIS & ERP software, and real-time data analytics.
         </motion.p>
 
         {/* Dual Actions CTA */}

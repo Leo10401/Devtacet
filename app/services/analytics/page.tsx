@@ -15,16 +15,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Data Analytics Systems & Dashboard Development | Devtacet',
+  title: 'Custom Data Analytics Systems & KPI Dashboard Engineering | Devtacet',
   description:
-    'Devtacet builds real-time data analytics tools, automated ETL pipelines, and executive dashboards turning business metrics into actionable decisions.',
+    'Devtacet engineers custom data analytics platforms, automated ETL pipelines, and real-time executive BI dashboards in Lucknow, India to turn messy data into strategic growth.',
   alternates: {
     canonical: '/services/analytics',
   },
   openGraph: {
-    title: 'Data Analytics Systems & Dashboard Development | Devtacet',
+    title: 'Custom Data Analytics Systems & KPI Dashboards | Devtacet',
     description:
-      'Real-time data analytics tools, automated data pipelines, and executive dashboards.',
+      'Custom data analytics systems, automated ETL data pipelines, and interactive executive dashboards engineered by Devtacet.',
     url: 'https://devtacet.me/services/analytics',
     type: 'website',
   },
@@ -106,10 +106,10 @@ export default function AnalyticsServicePage() {
               Data Engineering & BI
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Turn Complex Data into Real-Time Decision Support
+              Turn Complex Data Streams into Executive Action & Clarity
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, engineering custom data analytics tools, automated ETL pipelines, and executive dashboards that provide immediate visibility into business performance.
+              Devtacet is a data analytics engineering company in Lucknow, India. We engineer custom analytics platforms, automated ETL pipelines, and interactive executive dashboards that provide immediate visibility into business performance and revenue drivers.
             </p>
           </div>
 

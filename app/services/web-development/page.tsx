@@ -16,16 +16,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Web Development Services | Next.js & React 19 Full-Stack | Devtacet',
+  title: 'Website Development Company in Lucknow | Custom Web Apps | Devtacet',
   description:
-    'Devtacet builds high-performance websites and web applications using Next.js, React 19, and TypeScript. Engineered for sub-second speeds, conversion, and SEO.',
+    'Devtacet is a leading web development company in Lucknow, India. We engineer lightning-fast Next.js web applications, SaaS platforms, and responsive websites with sub-second speeds.',
   alternates: {
     canonical: '/services/web-development',
   },
   openGraph: {
-    title: 'Web Development Services | Devtacet',
+    title: 'Website Development Company in Lucknow | Custom Web Apps | Devtacet',
     description:
-      'High-performance full-stack web development engineered with Next.js, React 19, and TypeScript.',
+      'Leading web development company in Lucknow engineering high-performance Next.js web applications, SaaS platforms, and custom responsive websites.',
     url: 'https://devtacet.me/services/web-development',
     type: 'website',
   },
@@ -110,7 +110,7 @@ export default function WebDevelopmentServicePage() {
               Websites & Web Apps Engineered for Speed, Conversion, and Scale
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build modern, high-performance websites and web applications. We engineer every project with Next.js, React 19, TypeScript, and Tailwind CSS.
+              Devtacet is a web development company in Lucknow, India, helping startups, SMEs, and enterprises build modern, high-performance websites and web applications. We engineer every project with Next.js, React 19, TypeScript, and Tailwind CSS for sub-second speeds and maximum conversions.
             </p>
           </div>
 

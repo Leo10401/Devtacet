@@ -19,16 +19,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Digital Solutions & Software Engineering Services | Devtacet',
+  title: 'Software Engineering & Digital Solutions in Lucknow | Devtacet Services',
   description:
-    'Explore Devtacet’s core services: website development, mobile apps, custom software & MIS, data analytics, technical SEO, and social media marketing.',
+    'Explore Devtacet’s engineering services: Next.js website development, cross-platform mobile apps, custom MIS & ERP software, real-time analytics, and technical SEO & GEO in Lucknow, India.',
   alternates: {
     canonical: '/services',
   },
   openGraph: {
-    title: 'Digital Solutions & Software Engineering Services | Devtacet',
+    title: 'Software Engineering & Digital Solutions in Lucknow | Devtacet Services',
     description:
-      'Explore Devtacet’s core services: website development, mobile apps, custom software & MIS, data analytics, technical SEO, and social media marketing.',
+      'Full-stack software engineering services: Next.js web applications, React Native mobile apps, custom MIS & ERP tools, data analytics, and SEO.',
     url: 'https://devtacet.me/services',
     type: 'website',
   },
@@ -177,7 +177,7 @@ export default function ServicesPage() {
               Engineering & Digital Solutions Built to Perform
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-400">
-              Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+              Explore Devtacet’s engineering capabilities across 6 core disciplines. From high-throughput web applications and cross-platform mobile apps to bespoke MIS workflow automation and generative search visibility.
             </p>
           </div>
 

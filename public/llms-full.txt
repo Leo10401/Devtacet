@@ -1,7 +1,7 @@
 # Devtacet — Comprehensive Agency Documentation & Knowledge Base
 
 ## Overview
-Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+Devtacet is a software engineering and digital solutions studio based in Lucknow, India, helping startups and businesses build high-performance Next.js web applications, React Native mobile apps, custom MIS & ERP platforms, real-time data analytics systems, and technical SEO/GEO.
 
 - **Official Website**: https://devtacet.me
 - **Headquarters**: Lucknow, Uttar Pradesh, India
@@ -103,7 +103,7 @@ Devtacet is proudly headquartered in Lucknow, Uttar Pradesh, India. We actively 
 
 - **Legal / Brand Name**: Devtacet
 - **Headquarters**: Lucknow, Uttar Pradesh, India
-- **Email**: hello@devtacet.me
+- **Email**: devtacet@gmail.com
 - **Website**: https://devtacet.me
 - **About Page**: https://devtacet.me/about
 - **Contact Page**: https://devtacet.me/contact

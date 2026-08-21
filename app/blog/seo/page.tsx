@@ -152,7 +152,7 @@ export default function SeoPage() {
 
           <h3 className="mt-8 mb-3 font-display text-xl font-semibold">3. Entity-First Content</h3>
           <p className="leading-relaxed text-muted-foreground">
-            Write content that makes direct factual claims. For example: &ldquo;Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.&rdquo; LLMs extract and cite specific entities and facts.
+            Write content that makes direct factual claims. For example: &ldquo;Devtacet is a software engineering studio based in Lucknow, India, helping startups and businesses build Next.js web applications, React Native mobile apps, custom MIS platforms, and real-time data analytics systems.&rdquo; LLMs extract and cite specific entities and facts.
           </p>
 
           <h3 className="mt-8 mb-3 font-display text-xl font-semibold">4. FAQ Schema for Direct Answers</h3>

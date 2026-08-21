@@ -15,16 +15,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Custom Software & MIS Development Services | Devtacet',
+  title: 'Custom MIS & ERP Software Development Company in Lucknow | Devtacet',
   description:
-    'Devtacet engineers bespoke business software, Management Information Systems (MIS), ERP-lite tools, and automated backend infrastructure for modern operations.',
+    'Devtacet builds custom MIS, ERP-lite systems, and internal workflow automation software for growing businesses in Lucknow and beyond. Replace spreadsheets with bespoke tools.',
   alternates: {
     canonical: '/services/custom-software',
   },
   openGraph: {
-    title: 'Custom Software & MIS Development Services | Devtacet',
+    title: 'Custom MIS & ERP Software Development Company in Lucknow | Devtacet',
     description:
-      'Bespoke business software, internal portals, MIS platforms, and backend infrastructure.',
+      'Custom software development company in Lucknow building bespoke MIS, ERP-lite systems, and workflow automation tools.',
     url: 'https://devtacet.me/services/custom-software',
     type: 'website',
   },
@@ -106,10 +106,10 @@ export default function CustomSoftwareServicePage() {
               Systems Engineering & Automation
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Custom Software & MIS Built Around Your Business Operations
+              Custom Software & MIS Development for Growing Businesses
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, engineering custom software, MIS architectures, ERP-lite systems, and backend automation pipelines that streamline operations and replace messy spreadsheets.
+              Devtacet is a custom software development company in Lucknow, India. We engineer bespoke business software, Management Information Systems (MIS), ERP-lite platforms, and automated workflow pipelines for startups and SMEs looking to eliminate manual spreadsheets and scale operations.
             </p>
           </div>
 

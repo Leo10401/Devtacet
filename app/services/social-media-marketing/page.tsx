@@ -16,16 +16,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Social Media Marketing Services for Tech & Startups | Devtacet',
+  title: 'Social Media Marketing Agency for Tech Brands & Startups | Devtacet',
   description:
-    'Devtacet delivers data-driven social media marketing, content distribution loops, and brand positioning strategies built specifically for digital products and businesses.',
+    'Devtacet delivers data-driven social media marketing, technical content distribution loops, and audience growth strategies for SaaS products and tech businesses.',
   alternates: {
     canonical: '/services/social-media-marketing',
   },
   openGraph: {
-    title: 'Social Media Marketing Services | Devtacet',
+    title: 'Social Media Marketing Agency for Tech Brands & Startups | Devtacet',
     description:
-      'Data-driven social media marketing, developer engagement loops, and revenue-tied growth.',
+      'Data-driven social media marketing and brand positioning strategies built specifically for digital products, software tools, and tech businesses.',
     url: 'https://devtacet.me/services/social-media-marketing',
     type: 'website',
   },
@@ -107,10 +107,10 @@ export default function SocialMediaMarketingServicePage() {
               Brand Positioning & Growth
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Social Media Strategy for Tech Products & Growing Businesses
+              Audience Growth & Distribution Built for Digital Products
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, helping brands grow their audience and attract qualified inbound leads through authentic, high-impact social media marketing.
+              Devtacet is a social media marketing and brand growth agency in Lucknow, India. We help tech brands, SaaS companies, and digital founders build authentic community presence and generate qualified inbound leads through developer advocacy, high-conversion copy, and data-driven distribution loops.
             </p>
           </div>
 

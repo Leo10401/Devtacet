@@ -1,6 +1,6 @@
 # Devtacet — Digital Solutions Company
 
-> Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.
+> Devtacet is a software engineering and digital solutions studio based in Lucknow, India, helping startups and businesses build high-performance Next.js web applications, React Native mobile apps, custom MIS & ERP platforms, real-time data analytics systems, and technical SEO/GEO.
 
 ## Core Services
 
@@ -54,7 +54,7 @@
 
 ## Contact Information
 
-- **Email**: hello@devtacet.me
+- **Email**: devtacet@gmail.com
 - **Contact Page**: https://devtacet.me/contact
 - **GitHub**: https://github.com/Leo10401/Devtacet
 - **Twitter/X**: https://twitter.com/devtacet

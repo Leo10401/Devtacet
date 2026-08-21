@@ -15,16 +15,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'Mobile App Development Services | iOS & Android Apps | Devtacet',
+  title: 'Mobile App Development Company in Lucknow | iOS & Android Apps | Devtacet',
   description:
-    'Devtacet builds high-performance iOS and Android mobile applications using React Native and Flutter. Native speed, offline-first sync, and smooth app store approvals.',
+    'Devtacet is a mobile app development company in Lucknow, India. We engineer cross-platform iOS and Android apps with React Native & Flutter, offline-first sync, and 60fps native performance.',
   alternates: {
     canonical: '/services/mobile-app-development',
   },
   openGraph: {
-    title: 'Mobile App Development Services | Devtacet',
+    title: 'Mobile App Development Company in Lucknow | iOS & Android | Devtacet',
     description:
-      'Cross-platform iOS and Android mobile app engineering with React Native and Flutter.',
+      'Top mobile app development company in Lucknow engineering cross-platform React Native and Flutter mobile applications for iOS and Android.',
     url: 'https://devtacet.me/services/mobile-app-development',
     type: 'website',
   },
@@ -106,10 +106,10 @@ export default function MobileAppServicePage() {
               Cross-Platform Mobile Engineering
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              iOS & Android Mobile Apps Built for Retention and Performance
+              Cross-Platform iOS & Android Apps Built for Native Performance
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, engineering production-ready mobile applications. We build cross-platform apps with React Native and Flutter that deliver 60fps native feel, rock-solid stability, and seamless app store approval.
+              Devtacet is a mobile app development company in Lucknow, India. We engineer production-ready cross-platform mobile apps with React Native and Flutter, delivering 60fps native feel, offline-first reliability, and seamless App Store and Play Store approvals.
             </p>
           </div>
 

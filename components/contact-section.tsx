@@ -301,7 +301,7 @@ export function ContactSection() {
                   </div>
 
                   <a
-                    href="mailto:hello@devtacet.me"
+                    href="mailto:devtacet@gmail.com"
                     className="inline-flex items-center gap-1.5 rounded-xl bg-[#222432] hover:bg-[#2b2e40] border border-zinc-700/80 text-white px-3 py-2 text-xs font-semibold transition-colors shrink-0 shadow-sm"
                   >
                     Direct Email

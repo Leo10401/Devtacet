@@ -11,8 +11,8 @@ export function JsonLd() {
     logo: `${baseUrl}/icon.svg`,
     image: `${baseUrl}/og-image.png`,
     description:
-      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
-    email: 'mailto:hello@devtacet.me',
+      'Devtacet is a modern software engineering and digital studio based in Lucknow, India. We architect and build high-performance Next.js web applications, React Native mobile apps, custom MIS & ERP platforms, and real-time data analytics systems.',
+    email: 'mailto:devtacet@gmail.com',
     address: {
       '@type': 'PostalAddress',
       addressLocality: 'Lucknow',
@@ -124,7 +124,7 @@ export function JsonLd() {
     name: 'Devtacet',
     alternateName: ['Devtacet Digital Solutions', 'Devtacet Lucknow'],
     description:
-      'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+      'Official website of Devtacet, an engineering-first software studio in Lucknow, India specializing in Next.js web applications, mobile apps, custom MIS & ERP systems, and technical SEO/GEO.',
     publisher: {
       '@id': `${baseUrl}/#organization`,
     },
@@ -219,7 +219,7 @@ export function JsonLd() {
         name: 'What does Devtacet do?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Devtacet is a digital solutions company based in Lucknow, India, helping startups and businesses build websites, mobile applications, custom software and analytics systems, while also providing SEO and social media marketing services.',
+          text: 'Devtacet is a modern software engineering studio in Lucknow, India. We partner with startups and enterprises to build high-performance Next.js web applications, React Native mobile apps, custom MIS & ERP systems, and real-time data analytics platforms.',
         },
       },
       {

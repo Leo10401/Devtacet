@@ -16,16 +16,16 @@ import { SiteFooter } from '@/components/site-footer'
 import { Breadcrumbs } from '@/components/breadcrumbs'
 
 export const metadata: Metadata = {
-  title: 'SEO & Generative Engine Optimization (GEO) Services | Devtacet',
+  title: 'Technical SEO & Generative Engine Optimization (GEO) Agency | Devtacet',
   description:
-    'Devtacet delivers technical SEO and Generative Engine Optimization (GEO) services. Rank on Google and get cited by AI search engines like ChatGPT, Perplexity, and Claude.',
+    'Devtacet engineers technical SEO and Generative Engine Optimization (GEO) into codebases. Win Google rankings and direct AI citations across ChatGPT, Perplexity, and Claude.',
   alternates: {
     canonical: '/services/seo',
   },
   openGraph: {
-    title: 'Technical SEO & GEO Services | Devtacet',
+    title: 'Technical SEO & Generative Engine Optimization (GEO) Agency | Devtacet',
     description:
-      'Rank on Google and get cited across AI search engines with technical SEO & Generative Engine Optimization.',
+      'Engineered technical SEO & GEO strategies that rank your brand on Google and get cited by AI search engines like ChatGPT, Claude, and Perplexity.',
     url: 'https://devtacet.me/services/seo',
     type: 'website',
   },
@@ -107,10 +107,10 @@ export default function SeoServicePage() {
               Search & AI Visibility
             </span>
             <h1 className="mt-4 font-display text-4xl font-bold tracking-tight text-white sm:text-5xl lg:text-6xl">
-              Get Found on Google & Cited Across AI Search Engines
+              Dominate Traditional Search & Get Cited by AI Engines
             </h1>
             <p className="mt-5 text-base sm:text-lg leading-relaxed text-zinc-300">
-              Devtacet is a digital solutions company based in Lucknow, India, helping businesses achieve organic dominance. We combine deep technical SEO engineering with Generative Engine Optimization (GEO) to win traditional SERP rankings and direct AI citations.
+              Devtacet is a technical SEO and Generative Engine Optimization (GEO) company based in Lucknow, India. We combine structured code-level schema graphs, crawl optimization, and entity architecture to help businesses capture organic search traffic and win direct citations across ChatGPT, Perplexity, Claude, and Google AI Overviews.
             </p>
           </div>
 

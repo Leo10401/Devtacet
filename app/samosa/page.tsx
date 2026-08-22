@@ -433,8 +433,9 @@ export default function SamosaAdminDashboard() {
                 />
                 <button
                   type="button"
+                  aria-label={showPassword ? 'Hide password' : 'Show password'}
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white"
+                  className="absolute right-3 top-1/2 -translate-y-1/2 text-zinc-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-md"
                 >
                   {showPassword ? <EyeOff className="size-4" /> : <Eye className="size-4" />}
                 </button>
@@ -956,16 +957,18 @@ export default function SamosaAdminDashboard() {
                             <div className="flex items-center justify-end gap-2">
                               <a
                                 href={`mailto:${lead.email}?subject=Regarding your project inquiry on Devtacet`}
-                                className="inline-flex size-7 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-neutral-300 hover:text-white"
+                                className="inline-flex size-7 items-center justify-center rounded-lg border border-white/10 bg-white/[0.04] text-neutral-300 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500"
                                 title="Reply via Email"
+                                aria-label="Reply via Email"
                               >
                                 <Mail className="size-3.5" />
                               </a>
                               <button
                                 type="button"
                                 onClick={() => handleDeleteLead(lead._id)}
-                                className="inline-flex size-7 items-center justify-center rounded-lg border border-rose-500/20 bg-rose-500/10 text-rose-400 hover:bg-rose-500/20"
+                                className="inline-flex size-7 items-center justify-center rounded-lg border border-rose-500/20 bg-rose-500/10 text-rose-400 hover:bg-rose-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-rose-500"
                                 title="Delete Inquiry"
+                                aria-label="Delete Inquiry"
                               >
                                 <Trash2 className="size-3.5" />
                               </button>
@@ -1051,7 +1054,8 @@ export default function SamosaAdminDashboard() {
                 <button
                   type="button"
                   onClick={() => setIsProjectModalOpen(false)}
-                  className="text-neutral-400 hover:text-white"
+                  className="text-neutral-400 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-purple-500 rounded-md"
+                  aria-label="Close modal"
                 >
                   <X className="size-4" />
                 </button>
